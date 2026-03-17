@@ -19,6 +19,8 @@ In this lab, you will:
 2. Click **Load Transition Brief**.
 3. Review the summary text and the metric cards.
 
+![big-star-scene-5-load-transition-brief](images/big-star-scene-5-load-transition-brief.png)
+
 Expected result:
 - A transition narrative appears between response quality and operations.
 - Metric cards show repeat-case risk, verified memory, policy coverage, and pending reviews.

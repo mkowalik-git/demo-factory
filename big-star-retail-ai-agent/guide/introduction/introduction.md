@@ -8,6 +8,8 @@ Estimated Demo Time: 1 hour 30 minutes
 
 >Note: If you install demo in your environment, you should plan another 30 minutes.
 
+![big-star-ai-agent-home-page](images/big-star-ai-agent-home-page.png)
+
 ### Objectives
 
 In this workshop, you will:
@@ -25,19 +27,19 @@ This workshop assumes you have:
 
 ## Workshop Flow
 
-- Lab 1: Scene 1, chatbot versus memory-enabled agent.
-- Lab 2: Scene 2, planning before action.
-- Lab 3: Scene 3, why memory continuity matters.
-- Lab 4: Scene 4, grounded answers versus guesses.
-- Lab 5: Scene 5, transition from response quality to operational readiness.
-- Lab 6: Scene 6, memory types in action.
-- Lab 7: Scene 7, governed versus ungoverned writes.
-- Lab 8: Scene 8, explainable decision trace.
-- Lab 9: Scene 9, manager approval dashboard.
-- Lab 10: Scene 10, isolation and auto-expiry controls.
-- Lab 11: Scene 11, architecture as the operating model.
-- Lab 12: conclusion and business outcomes.
-- Lab 13: Download the LiveStack, run the portable stack with Podman Compose.
+- Scene 1: Chatbot versus memory-enabled agent.
+- Scene 2: Planning before action.
+- Scene 3: Why memory continuity matters.
+- Scene 4: Grounded answers versus guesses.
+- Scene 5: Transition from response quality to operational readiness.
+- Scene 6: Memory types in action.
+- Scene 7: Governed versus ungoverned writes.
+- Scene 8: Explainable decision trace.
+- Scene 9: Manager approval dashboard.
+- Scene 10: Isolation and auto-expiry controls.
+- Scene 11: Architecture as the operating model.
+- Conclusion and business outcomes.
+- Download the LiveStack, run the portable stack with Podman Compose.
 
 ## Learn More
 

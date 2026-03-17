@@ -19,6 +19,8 @@ In this lab, you will:
 2. Click **Load Architecture**.
 3. Review the four architecture layers shown on the page.
 
+![big-star-scene-11-load-architecture](images/big-star-scene-11-load-architecture.png)
+
 Expected result:
 - A structured layer model appears for planner, memory, tools, and governor.
 - Each layer includes a practical role in business operations.

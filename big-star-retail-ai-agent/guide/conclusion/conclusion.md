@@ -19,6 +19,8 @@ In this lab, you will:
 2. Click **Load Conclusion**.
 3. Review the before-and-after panels.
 
+![big-star-scene-conclusion-load-conclusion](images/big-star-scene-conclusion-load-conclusion.png)
+
 Expected result:
 - A business summary appears with outcome-oriented comparisons.
 - The message connects customer continuity, decision quality, and oversight.

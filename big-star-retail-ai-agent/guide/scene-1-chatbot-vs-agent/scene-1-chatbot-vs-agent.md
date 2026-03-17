@@ -19,6 +19,8 @@ In this lab, you will:
 2. Click **Run Chatbot**.
 3. Review the response in the **Stateless Chatbot** panel.
 
+![big-star-ai-agent-run-chatbot](images/big-star-scene-1-run-chatbot.png)
+
 Expected result:
 - The answer is generic and policy-first.
 - The response does not feel personalized.
@@ -29,6 +31,8 @@ Expected result:
 1. In the same scene, click **Run Agent**.
 2. Review the response in the **Memory-Enabled Agent** panel.
 3. Compare the step list with the chatbot panel.
+
+![big-star-ai-agent-run-agent](images/big-star-scene-1-run-agent.gif)
 
 Expected result:
 - The response references customer history and order context.

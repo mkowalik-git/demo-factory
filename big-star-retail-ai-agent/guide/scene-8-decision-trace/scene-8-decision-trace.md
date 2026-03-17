@@ -24,6 +24,8 @@ Expected result:
 - Step-by-step findings are displayed with source labels.
 - The timeline feels structured, not opaque.
 
+![big-star-scene-8-view-trace](images/big-star-scene-8-view-trace.gif)
+
 ## Task 2: Review Final Narrative and Verdict
 
 1. Wait for the narration panel and conclusion card to render.
