@@ -1,4 +1,4 @@
-# Lab 4: Scene 4 Grounded Responses
+# Scene 4 Grounded Responses
 
 ## Introduction
 
@@ -39,7 +39,6 @@ Expected result:
 
 This scene matters because fluent answers are not enough when financial and policy decisions are involved. Organizations need responses that can be traced to approved sources, especially when customer impact is high. Oracle AI Database 26ai is well suited for this by combining structured data, text, and vector retrieval in one governed architecture, so customer AI-agent workflows can ground responses consistently, lower hallucination risk, and make decisions that are easier to defend in review.
 
-## Acknowledgements
-
+## Credits & Build Notes
 - **Author** - LiveLabs Team
 - **Last Updated By/Date** - LiveLabs Team, March 2026

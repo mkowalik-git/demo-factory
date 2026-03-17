@@ -1,4 +1,4 @@
-# Lab 2: Scene 2 Agent Planning
+# Scene 2 Agent Planning
 
 ## Introduction
 
@@ -39,7 +39,6 @@ Expected result:
 
 This scene shows why planning quality directly affects operational reliability. If the plan is detached from live business facts, automation can still be fast but wrong; if planning is grounded on the same transactional and AI context, execution becomes both faster and safer. Oracle AI Database 26ai enables that convergence by keeping operational data and AI retrieval in one governed platform, which helps customer agent programs reduce rework, avoid escalation loops, and keep automated actions aligned with current business reality.
 
-## Acknowledgements
-
+## Credits & Build Notes
 - **Author** - LiveLabs Team
 - **Last Updated By/Date** - LiveLabs Team, March 2026

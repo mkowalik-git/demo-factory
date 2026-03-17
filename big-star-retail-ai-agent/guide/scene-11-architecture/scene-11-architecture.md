@@ -1,4 +1,4 @@
-# Lab 11: Scene 11 Architecture
+# Scene 11 Architecture
 
 ## Introduction
 
@@ -39,7 +39,6 @@ Expected result:
 
 The architecture view makes clear that trusted AI operations come from coordination, not isolated features. Planner context, memory, tool interactions, and governance signals need to work as one system if teams want repeatable business outcomes. Oracle AI Database 26ai is well suited to that model because converged architecture reduces integration fragmentation, giving customer AI-agent workflows a clearer path from demo success to production reliability.
 
-## Acknowledgements
-
+## Credits & Build Notes
 - **Author** - LiveLabs Team
 - **Last Updated By/Date** - LiveLabs Team, March 2026

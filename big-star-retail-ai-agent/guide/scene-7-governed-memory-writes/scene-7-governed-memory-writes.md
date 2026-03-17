@@ -1,4 +1,4 @@
-# Lab 6: Scene 7 Governed Memory Writes
+# Scene 7 Governed Memory Writes
 
 ## Introduction
 
@@ -39,7 +39,6 @@ Expected result:
 
 The practical lesson in this scene is that memory quality control is a front-line risk control, not a backend enhancement. Unverified writes can silently propagate bad assumptions into many future decisions, which creates operational and compliance exposure. By applying validation, write controls, and audit capture close to where memory is persisted, Oracle AI Database 26ai gives customer AI-agent workflows a safer path to scale automation without sacrificing accountability.
 
-## Acknowledgements
-
+## Credits & Build Notes
 - **Author** - LiveLabs Team
 - **Last Updated By/Date** - LiveLabs Team, March 2026

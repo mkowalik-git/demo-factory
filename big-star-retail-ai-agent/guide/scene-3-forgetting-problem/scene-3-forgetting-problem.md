@@ -1,4 +1,4 @@
-# Lab 3: Scene 3 The Forgetting Problem
+# Scene 3 The Forgetting Problem
 
 ## Introduction
 
@@ -39,7 +39,6 @@ Expected result:
 
 The key message here is that continuity is a business capability, not a convenience. Repeated customer explanations increase effort, lower trust, and extend cycle times, while durable context lets each interaction pick up where the last one ended. Oracle AI Database 26ai supports this through a converged approach where history, memory context, and policy knowledge remain queryable together, allowing AI-agent workflows to preserve context across sessions and deliver more predictable outcomes across teams and channels.
 
-## Acknowledgements
-
+## Credits & Build Notes
 - **Author** - LiveLabs Team
 - **Last Updated By/Date** - LiveLabs Team, March 2026

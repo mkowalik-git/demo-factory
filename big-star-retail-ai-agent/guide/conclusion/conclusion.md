@@ -1,4 +1,4 @@
-# Lab 12: Conclusion and Business Outcomes
+# Conclusion and Business Outcomes
 
 ## Introduction
 
@@ -39,7 +39,6 @@ Expected result:
 
 Across the workshop, the central takeaway is that sustainable AI value comes from combining response quality, memory continuity, and governance discipline on one operational data foundation. Oracle AI Database 26ai's converged architecture is compelling in this context because it keeps transactional truth, AI retrieval patterns, workflow state, and control evidence aligned over time. For customers running AI-agent workflows, that alignment supports faster scale-up with stronger reliability, better auditability, and less architectural complexity.
 
-## Acknowledgements
-
+## Credits & Build Notes
 - **Author** - LiveLabs Team
 - **Last Updated By/Date** - LiveLabs Team, March 2026

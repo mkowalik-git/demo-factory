@@ -1,5 +1,4 @@
-# Lab 13: Take it home
-
+# Download the LiveStack
 ## Introduction
 
 This lab shows how to run the Big Star demo in your own environment using the portable stack package and Podman Compose.
@@ -17,7 +16,7 @@ In this lab, you will:
 ## Task 1: Download the portable package
 
 1. Download the package from:
-    `https://<ADD-DOWNLOAD-URL-HERE>/ll-demo-agent.zip`
+[ll-demo-agent.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/ll-demo-agent.zip)
 2. Save the file to a local working directory.
 
 Expected result:
@@ -77,7 +76,6 @@ Expected result:
 
 A portable runbook is what turns a demo into a repeatable field asset. By packaging the application and startup flow into a Podman Compose stack, teams can reproduce the same scenario in customer-adjacent environments with less setup drift and fewer handoffs. This makes it easier to validate value quickly, support workshops consistently, and move from guided demo sessions to practical self-service enablement.
 
-## Acknowledgements
-
+## Credits & Build Notes
 - **Author** - LiveLabs Team
 - **Last Updated By/Date** - LiveLabs Team, March 2026

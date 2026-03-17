@@ -37,7 +37,7 @@ This workshop assumes you have:
 - Lab 10: Scene 10, isolation and auto-expiry controls.
 - Lab 11: Scene 11, architecture as the operating model.
 - Lab 12: conclusion and business outcomes.
-- Lab 13: Take it home, run the portable stack with Podman Compose.
+- Lab 13: Download the LiveStack, run the portable stack with Podman Compose.
 
 ## Learn More
 
@@ -45,7 +45,6 @@ This workshop assumes you have:
 - [JSON Search Index for Ad Hoc Queries and Full-Text Search](https://docs.oracle.com/en/database/oracle/oracle-database/26/adjsn/json-search-index-ad-hoc-queries-and-full-text-search.html)
 - [Oracle Data Redaction and JSON](https://docs.oracle.com/en/database/oracle/oracle-database/26/dbred/oracle-data-redaction-and-json.html)
 
-## Acknowledgements
-
+## Credits & Build Notes
 - **Author** - LiveLabs Team
 - **Last Updated By/Date** - LiveLabs Team, March 2026

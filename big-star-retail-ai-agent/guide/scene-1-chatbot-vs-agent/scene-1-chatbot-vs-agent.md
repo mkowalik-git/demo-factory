@@ -1,4 +1,4 @@
-# Lab 1: Scene 1 Chatbot vs Agent
+# Scene 1 Chatbot vs Agent
 
 ## Introduction
 
@@ -39,7 +39,6 @@ Expected result:
 
 In this scene, the real business point is not just a nicer response; it is the ability to make every customer interaction context-aware and consistent under pressure. When profile data, order history, policies, and semantic context can be resolved together through Oracle AI Database 26ai's converged architecture, agents stop defaulting to generic answers and start making decisions that match the customer situation. For teams operating AI-agent workflows, that translates into stronger first-contact resolution, less channel-to-channel drift, and faster recovery of customer trust.
 
-## Acknowledgements
-
+## Credits & Build Notes
 - **Author** - LiveLabs Team
 - **Last Updated By/Date** - LiveLabs Team, March 2026

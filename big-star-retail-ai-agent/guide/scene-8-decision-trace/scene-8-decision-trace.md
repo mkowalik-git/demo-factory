@@ -1,4 +1,4 @@
-# Lab 7: Scene 8 Decision Trace
+# Scene 8 Decision Trace
 
 ## Introduction
 
@@ -39,7 +39,6 @@ Expected result:
 
 This scene highlights that explainability must be operational, not theoretical. High-impact decisions move faster when managers can inspect complete, coherent evidence instead of reconstructing context across tools. Oracle AI Database 26ai supports that requirement by keeping reasoning artifacts, workflow actions, and outcomes linked in durable records, which allows customer AI-agent workflows to speed up approvals while maintaining confidence and control.
 
-## Acknowledgements
-
+## Credits & Build Notes
 - **Author** - LiveLabs Team
 - **Last Updated By/Date** - LiveLabs Team, March 2026

@@ -1,4 +1,4 @@
-# Lab 5: Scene 5 Business Transition Brief
+# Scene 5 Business Transition Brief
 
 ## Introduction
 
@@ -39,7 +39,6 @@ Expected result:
 
 The transition brief is where a promising pilot becomes an operational decision. Strong answers in isolated cases do not automatically mean the organization is ready to scale, because readiness depends on queue behavior, memory quality, and policy coverage moving together. Oracle AI Database 26ai's converged architecture supports that view by keeping those signals on a single trusted data foundation, giving customer AI-agent programs a clearer control point for quality, risk, and throughput as they scale.
 
-## Acknowledgements
-
+## Credits & Build Notes
 - **Author** - LiveLabs Team
 - **Last Updated By/Date** - LiveLabs Team, March 2026

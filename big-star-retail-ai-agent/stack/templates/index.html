@@ -27,6 +27,18 @@ nav .nav-links{display:flex;gap:.25rem;flex-wrap:wrap;flex:1}
 nav .nav-link{padding:.35rem .65rem;border-radius:6px;font-size:.75rem;font-weight:500;color:var(--muted);transition:all .2s;white-space:nowrap}
 nav .nav-link:hover,nav .nav-link.active{background:var(--card);color:var(--text);text-decoration:none}
 nav .nav-link.active{border-bottom:2px solid var(--gold);color:var(--gold)}
+nav .utility{display:flex;align-items:center;gap:.5rem}
+.icon-btn{background:var(--card);color:var(--text);border:1px solid var(--border);padding:.4rem .7rem;border-radius:8px;font-size:.75rem;font-weight:700}
+.icon-btn:hover{background:var(--card-hover)}
+.icon-btn.active{border-color:var(--gold);color:var(--gold)}
+.xray-toggle-btn{display:inline-flex;align-items:center;justify-content:center;padding:.35rem;width:34px;height:34px;position:relative}
+.xray-toggle-icon{width:22px;height:22px;object-fit:contain;flex-shrink:0}
+.xray-toggle-btn.attention-pulse::after{content:'';position:absolute;inset:-4px;border-radius:10px;border:2px solid rgba(248,196,0,.9);pointer-events:none;animation:xrayPulse 1.25s ease-in-out 4 forwards}
+@keyframes xrayPulse{
+  0%{opacity:.25;box-shadow:0 0 0 0 rgba(248,196,0,.18)}
+  45%{opacity:1;box-shadow:0 0 18px 4px rgba(248,196,0,.55)}
+  100%{opacity:0;box-shadow:0 0 0 0 rgba(248,196,0,0)}
+}
 main{flex:1;max-width:1200px;width:100%;margin:0 auto;padding:2rem 1.5rem}
 
 /* Cards */
@@ -80,12 +92,29 @@ main{flex:1;max-width:1200px;width:100%;margin:0 auto;padding:2rem 1.5rem}
 .trace-step{display:flex;gap:1rem;padding:1rem;border-left:3px solid var(--border);margin-left:1rem;margin-bottom:.25rem;opacity:0;animation:fadeIn .5s ease forwards}
 .trace-step.visible{opacity:1}
 
-/* Presenter panel */
-#presenter{position:fixed;bottom:0;right:0;width:360px;max-height:50vh;background:var(--surface);border:1px solid var(--gold);border-radius:var(--radius) var(--radius) 0 0;padding:1rem;z-index:200;display:none;overflow-y:auto;box-shadow:0 -4px 30px rgba(0,0,0,.5)}
-#presenter.open{display:block}
-#presenter h3{color:var(--gold);font-size:.9rem;margin-bottom:.5rem}
-#presenter .cue{font-size:.8rem;color:var(--muted);line-height:1.5;margin-bottom:.75rem}
-#presenter .nav-btn{background:var(--card);color:var(--text);border:1px solid var(--border);padding:.4rem .8rem;border-radius:6px;font-size:.75rem;margin-right:.25rem}
+/* Unified Guide Panel */
+#xrayPanel{position:fixed;top:68px;right:16px;width:440px;max-height:calc(100vh - 86px);background:var(--surface);border:1px solid var(--blue);border-radius:var(--radius);padding:1rem;z-index:190;display:none;overflow-y:auto;box-shadow:0 12px 30px rgba(0,0,0,.45)}
+#xrayPanel.open{display:block}
+#xrayPanel h3{color:var(--gold);font-size:.95rem;margin-bottom:.75rem}
+#xrayPanel .cue{font-size:.8rem;color:var(--muted);line-height:1.5;margin-bottom:.7rem}
+#xrayPanel .nav-btn{background:var(--card);color:var(--text);border:1px solid var(--border);padding:.4rem .8rem;border-radius:6px;font-size:.75rem;margin-right:.25rem}
+#xrayPanel .panel-close{position:absolute;top:.6rem;right:.6rem;width:28px;height:28px;border-radius:7px;border:1px solid var(--border);background:var(--card);color:var(--muted);display:inline-flex;align-items:center;justify-content:center;font-size:1rem;line-height:1;padding:0}
+#xrayPanel .panel-close:hover{background:var(--card-hover);color:var(--text)}
+.xray-row{margin-bottom:.95rem}
+.xray-row span{display:block;color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.3rem}
+.xray-row p{font-size:.82rem;color:var(--text);line-height:1.45}
+.xray-feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:.55rem}
+.xray-feature{background:linear-gradient(140deg,rgba(59,130,246,.17),rgba(59,130,246,.07));border:1px solid rgba(59,130,246,.42);border-radius:10px;padding:.65rem .7rem;transition:transform .2s,border-color .2s,box-shadow .2s,background .2s}
+.xray-feature h4{font-size:.77rem;color:#9ec5ff;margin-bottom:.28rem}
+.xray-feature p{font-size:.76rem;color:#d8e6ff;line-height:1.38}
+.xray-feature:hover{transform:translateY(-2px);border-color:#84b7ff;box-shadow:0 10px 22px rgba(59,130,246,.24);background:linear-gradient(140deg,rgba(59,130,246,.25),rgba(59,130,246,.11))}
+.xray-terminal{background:#070c18;border:1px solid #1d3352;border-radius:10px;padding:.65rem .7rem;max-height:180px;overflow-y:auto;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}
+.xray-terminal .term-block{padding-bottom:.55rem;margin-bottom:.55rem;border-bottom:1px dashed rgba(125,181,255,.24)}
+.xray-terminal .term-block:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none}
+.xray-terminal .term-cmd{font-size:.74rem;color:#8ed2ff;line-height:1.45}
+.xray-terminal .term-res{font-size:.73rem;color:#d7e5ff;line-height:1.45;padding-left:.35rem;margin-top:.22rem}
+.xray-terminal-empty{font-size:.74rem;color:#9db0cf;line-height:1.45}
+@media(max-width:980px){ #xrayPanel{top:62px;right:0;width:100%;max-height:calc(100vh - 62px);border-radius:0} #xrayPanel .xray-feature-grid{grid-template-columns:1fr}}
 
 /* Home */
 .hero{text-align:center;padding:3rem 0}.hero h1{font-size:2.8rem;font-weight:800;margin-bottom:1rem;background:linear-gradient(135deg,var(--gold),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
@@ -126,6 +155,11 @@ main{flex:1;max-width:1200px;width:100%;margin:0 auto;padding:2rem 1.5rem}
     <a class="nav-link" href="#scene10" onclick="go('scene10')">10: Isolation</a>
     <a class="nav-link" href="#scene11" onclick="go('scene11')">11: Architecture</a>
     <a class="nav-link" href="#conclusion" onclick="go('conclusion')">Conclusion</a>
+  </div>
+  <div class="utility">
+    <button id="xrayToggle" class="icon-btn xray-toggle-btn attention-pulse" title="What's happening here?" aria-label="What's happening here?" aria-pressed="false">
+      <img class="xray-toggle-icon" src="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/images/theo.png" alt="X-Ray icon">
+    </button>
   </div>
 </nav>
 
@@ -240,12 +274,19 @@ main{flex:1;max-width:1200px;width:100%;margin:0 auto;padding:2rem 1.5rem}
 </main>
 </div>
 
-<!-- PRESENTER PANEL -->
-<div id="presenter">
-<h3>🎤 Presenter Panel</h3>
-<div class="cue" id="pres-cue">Press ← → to navigate scenes. Press R to reset current scene.</div>
-<div><button class="nav-btn" onclick="prevScene()">← Prev</button><button class="nav-btn" onclick="nextScene()">Next →</button><button class="nav-btn" onclick="resetCurrentScene()">Reset</button></div>
+<!-- Unified What's Happening + SQLCL Panel -->
+<div id="xrayPanel" aria-live="polite">
+  <button id="xrayClose" class="panel-close" type="button" aria-label="Close panel" title="Close">×</button>
+  <h3>What's happening here?</h3>
+  <div class="cue" id="pres-cue">Press ← → to navigate scenes. Press R to reset current scene.</div>
+  <div class="cue" id="pres-script">Use the Theo icon to open this guide and see the scene talk track.</div>
+  <div class="xray-row">
+    <span>sqlcl:</span>
+    <div id="xray-terminal" class="xray-terminal"><div class="xray-terminal-empty">Run a scene action to load database command output.</div></div>
+  </div>
+  <div style="margin-bottom:.25rem"><button class="nav-btn" onclick="prevScene()">← Prev</button><button class="nav-btn" onclick="nextScene()">Next →</button><button class="nav-btn" onclick="resetCurrentScene()">Reset</button></div>
 </div>
+<button id="help" type="button" hidden aria-hidden="true"></button>
 
 <script>
 // =========================================================================
@@ -253,8 +294,251 @@ main{flex:1;max-width:1200px;width:100%;margin:0 auto;padding:2rem 1.5rem}
 // =========================================================================
 const SCENES=['home','scene1','scene2','scene3','scene4','scene5','scene6','scene7','scene8','scene9','scene10','scene11','conclusion'];
 const CUES={home:'Welcome! Set the stage — Marcus Webb, Big Star Collectibles.',scene1:'Demo the chatbot failure first, then the agent.',scene2:'Show the plan appearing step by step.',scene3:'Load the 3 sessions first. Then try with memory.',scene4:'Run without data first to show hallucination.',scene5:'Use this bridge to connect response quality with operational readiness.',scene6:'Load all memory types. Walk through each quadrant.',scene7:'Run ungoverned first (scary!), then governed.',scene8:'Click View Trace. Steps appear one by one.',scene9:'Load dashboard. Walk through Green→Yellow→Red.',scene10:'Access support first, then try logistics (denied).',scene11:'Explain the 4-layer architecture, then run Elena through all layers.',conclusion:'Close with business outcomes: fewer repeats, faster approvals, higher trust.'};
+const PRESENTER_SCRIPTS={
+  home:[
+    'This story follows one customer case from failed support interactions to trusted AI-assisted resolution.',
+    'Business takeaway: the value is operational consistency, not just a better chatbot answer.'
+  ],
+  scene1:[
+    'You are showing the difference between generic policy replies and context-aware service.',
+    'Business takeaway: context continuity improves first-contact outcomes and customer trust.'
+  ],
+  scene2:[
+    'This scene shows intent before execution, so business teams can review decision flow.',
+    'Business takeaway: visible planning reduces rework and escalation friction.'
+  ],
+  scene3:[
+    'This is the continuity proof point: the agent can continue the story instead of restarting it.',
+    'Business takeaway: fewer repeated questions means faster service and better customer sentiment.'
+  ],
+  scene4:[
+    'This scene contrasts fluent but risky guesses with grounded, policy-backed guidance.',
+    'Business takeaway: answers tied to approved data are easier to defend and approve.'
+  ],
+  scene5:[
+    'This is the operational checkpoint between response quality and production readiness.',
+    'Business takeaway: scale decisions need quality, queue, and control metrics together.'
+  ],
+  scene6:[
+    'Use this scene to explain why memory is a managed operating capability, not a single feature.',
+    'Business takeaway: mixed memory types improve decision reliability when governed together.'
+  ],
+  scene7:[
+    'This scene demonstrates that memory governance is active risk control at write time.',
+    'Business takeaway: blocking bad writes early prevents future policy drift.'
+  ],
+  scene8:[
+    'This is the explainability proof point for high-value actions and management review.',
+    'Business takeaway: traceable evidence shortens review cycles while preserving control.'
+  ],
+  scene9:[
+    'This dashboard shows how oversight scales through risk-tiered queues and fast intervention.',
+    'Business takeaway: Priority Transactions keep critical approvals responsive under load.'
+  ],
+  scene10:[
+    'This scene explains controlled access and lifecycle boundaries for shared AI operations.',
+    'Business takeaway: Oracle SQL Firewall and namespace controls support least-privilege governance.'
+  ],
+  scene11:[
+    'This architecture view ties planning, memory, tools, and governance into one operating model.',
+    'Business takeaway: production success depends on coordinated layers, not isolated features.'
+  ],
+  conclusion:[
+    'Close by linking customer outcomes with operating discipline and scalable governance.',
+    'Business takeaway: durable AI value comes from one converged, auditable data foundation.'
+  ],
+};
+const xraySceneProfiles={
+  home:{
+    sql:'Health check confirms Oracle reachability before scene actions run.',
+    commands:[
+      {command:'SELECT 1 AS OK FROM dual;',response:'OK=1 (database reachable).'}
+    ],
+    features:[
+      {title:'Converged Baseline',detail:'Transactional, AI, and governance telemetry can run in one Oracle AI Database 26ai foundation.'},
+      {title:'Operational Readiness',detail:'A single health check validates the same data platform used by every scene.'}
+    ]
+  },
+  scene1:{
+    sql:'Customer profile, order context, interaction history, and policy checks are assembled for a contextual response.',
+    commands:[
+      {command:"SELECT CUSTOMER_ID, NAME, TIER FROM CC_CUSTOMERS WHERE CUSTOMER_ID='CUST-001';",response:'1 row returned: CUST-001, Elena Vasquez, VIP.'},
+      {command:"SELECT POLICY_ID, POLICY_NAME FROM CC_POLICIES WHERE POLICY_ID IN ('POL-001','POL-004');",response:'2 policy rows loaded for eligibility and exception handling.'}
+    ],
+    features:[
+      {title:'Context Continuity',detail:'Customer profile, order data, and policy controls are evaluated together before the answer is generated.'},
+      {title:'Fewer Hand-Offs',detail:'A converged architecture reduces cross-system joins that can delay support workflows.'}
+    ]
+  },
+  scene2:{
+    sql:'Planned steps reference customer/order/policy checks before execution sequencing is shown.',
+    commands:[
+      {command:"SELECT ORDER_ID, ITEM_NAME, ORDER_VALUE FROM CC_ORDERS WHERE ORDER_ID='BSC-20260220-0561';",response:'1 order row returned for planning context.'},
+      {command:"SELECT INTERACTION_ID, OUTCOME FROM CC_INTERACTIONS WHERE CUSTOMER_ID='CUST-001' ORDER BY INTERACTION_TIME DESC FETCH FIRST 3 ROWS ONLY;",response:'3 prior interactions returned to shape the execution plan.'}
+    ],
+    features:[
+      {title:'Plan + Data Alignment',detail:'Every decomposition step is anchored to governed enterprise records.'},
+      {title:'Operational Transparency',detail:'Teams can trace how planning logic maps directly to the stored business state.'}
+    ]
+  },
+  scene3:{
+    sql:'Session history is replayed from interaction records to demonstrate continuity across contacts.',
+    commands:[
+      {command:"SELECT INTERACTION_ID, SESSION_ID, ISSUE_SUMMARY, OUTCOME FROM CC_INTERACTIONS WHERE CUSTOMER_ID='CUST-001' ORDER BY INTERACTION_TIME ASC;",response:'3 sessions replayed in timeline order.'},
+      {command:"SELECT MEMORY_TYPE, KEY, VALUE FROM CC_AGENT_MEMORY WHERE CUSTOMER_ID='CUST-001' ORDER BY CREATED_AT DESC;",response:'Working and episodic memory records returned for continuity.'}
+    ],
+    features:[
+      {title:'Durable Memory',detail:'Oracle AI Database 26ai persists customer context across contacts, channels, and agent sessions.'},
+      {title:'Lower Repeat Effort',detail:'Agents can resume the case immediately instead of forcing customers to restate history.'}
+    ]
+  },
+  scene4:{
+    sql:'Grounded path cites approved policy records; ungrounded path intentionally skips enterprise retrieval.',
+    commands:[
+      {command:"SELECT POLICY_ID, POLICY_NAME, DESCRIPTION FROM CC_POLICIES WHERE POLICY_ID='POL-004';",response:'Policy exception record retrieved for defect-based return handling.'},
+      {command:"SELECT ORDER_ID, SALE_TYPE, ACTUAL_STATUS FROM CC_ORDERS WHERE ORDER_ID='BSC-20260128-0847';",response:'Order status confirms policy applicability for grounded response.'}
+    ],
+    features:[
+      {title:'Grounded Decisions',detail:'Business-sensitive answers are tied to approved policy and order data, not model guesses.'},
+      {title:'Converged Retrieval',detail:'Relational, document, and AI context can be orchestrated in one database tier.'}
+    ]
+  },
+  scene5:{
+    sql:'Counts unresolved interactions, verified memory records, official policy entries, and pending approvals.',
+    commands:[
+      {command:"SELECT COUNT(*) AS UNRESOLVED_COUNT FROM CC_INTERACTIONS WHERE OUTCOME!='resolved';",response:'UNRESOLVED_COUNT=2.'},
+      {command:"SELECT COUNT(*) AS PENDING_REVIEW FROM CC_WORKFLOW_LOG WHERE STATUS='pending_review';",response:'PENDING_REVIEW=3.'}
+    ],
+    features:[
+      {title:'One Operational Lens',detail:'Quality, risk, and throughput indicators stay queryable from a single enterprise data backbone.'},
+      {title:'Readiness Signal',detail:'Teams can assess if the workflow is ready for scale without stitching reports across systems.'}
+    ]
+  },
+  scene6:{
+    sql:'Memory records are grouped by type (working, episodic, semantic, procedural) and mapped to case impact.',
+    commands:[
+      {command:"SELECT MEMORY_TYPE, COUNT(*) AS CNT FROM CC_AGENT_MEMORY GROUP BY MEMORY_TYPE;",response:'Counts returned for WORKING, EPISODIC, SEMANTIC, and PROCEDURAL memory.'},
+      {command:"SELECT CUSTOMER_ID, NAME, TIER, LIFETIME_SPEND FROM CC_CUSTOMERS WHERE CUSTOMER_ID='CUST-001';",response:'Customer context row joined to memory insights.'}
+    ],
+    features:[
+      {title:'Unified Memory Model',detail:'Different memory types remain governed under one Oracle AI Database 26ai control plane.'},
+      {title:'Consistent Operations',detail:'A converged model reduces divergence between AI state and transactional truth.'}
+    ]
+  },
+  scene7:{
+    sql:'Governed path calls validation PL/SQL before write; audit log records blocked or approved outcomes.',
+    commands:[
+      {command:"BEGIN :is_valid := CC_VALIDATE_MEMORY_WRITE(:customer_id,:memory_key,:memory_value); END;",response:'PL/SQL validator returns ALLOW or BLOCK before memory write.'},
+      {command:"SELECT EVENT_TYPE, ACTION, REASON_CODE FROM CC_AUDIT_LOG WHERE CUSTOMER_ID='CUST-001' ORDER BY CREATED_AT DESC FETCH FIRST 3 ROWS ONLY;",response:'Latest audit trail confirms governed decision path.'}
+    ],
+    features:[
+      {title:'Write-Time Guardrails',detail:'Invalid memory updates are blocked before they can influence future agent behavior.'},
+      {title:'Audit-Ready Control',detail:'Governance evidence is persisted with each outcome for operational accountability.'}
+    ]
+  },
+  scene8:{
+    sql:'Workflow, memory, and audit records are replayed into a stepwise decision trace.',
+    commands:[
+      {command:"SELECT * FROM CC_WORKFLOW_LOG WHERE LOG_ID='WF-004';",response:'Workflow event loaded for the $400 refund decision.'},
+      {command:"SELECT * FROM CC_AUDIT_LOG WHERE CUSTOMER_ID='CUST-001' ORDER BY CREATED_AT ASC;",response:'Chronological audit records returned for full trace reconstruction.'}
+    ],
+    features:[
+      {title:'Explainability at Scale',detail:'Managers can inspect evidence, reasoning, and action outcomes in one trace path.'},
+      {title:'Governed Replay',detail:'Decision history can be replayed without losing policy context or event integrity.'}
+    ]
+  },
+  scene9:{
+    sql:'Queue lanes are aggregated by oversight tier; approval writes update workflow state and cascade actions.',
+    commands:[
+      {command:"SELECT PRIORITY_LANE, STATUS, COUNT(*) AS ITEMS FROM CC_WORKFLOW_LOG GROUP BY PRIORITY_LANE, STATUS;",response:'Green/Yellow/Red lane aggregates returned for dashboard rendering.'},
+      {command:"UPDATE CC_WORKFLOW_LOG SET STATUS='approved', REVIEWER='Marcus Webb' WHERE LOG_ID='WF-004';",response:'1 row updated; follow-on actions queued for fulfillment.'}
+    ],
+    features:[
+      {title:'Priority Transactions',detail:'Critical approvals remain responsive under load to protect high-value service moments.'},
+      {title:'Human-in-the-Loop',detail:'Reviewer actions and workflow state stay synchronized in real time.'}
+    ]
+  },
+  scene10:{
+    sql:'Namespace access checks run with role context and return granted or denied memory visibility.',
+    commands:[
+      {command:"SELECT NAMESPACE, KEY, VALUE FROM CC_AGENT_MEMORY WHERE NAMESPACE=:ns AND ROLE=:role;",response:'Scoped records returned only when policy allows access.'},
+      {command:"BEGIN CC_EXPIRE_MEMORY; END;",response:'TTL cleanup procedure executed; expired records removed safely.'}
+    ],
+    features:[
+      {title:'Oracle SQL Firewall',detail:'Allow-list protections reduce exposure to unexpected SQL behavior in agent workflows.'},
+      {title:'Least-Privilege Boundaries',detail:'Namespace isolation and lifecycle controls protect sensitive context by design.'}
+    ]
+  },
+  scene11:{
+    sql:'Architecture synthesis ties planner context, memory retrieval, tool checks, and governance outcomes.',
+    commands:[
+      {command:"SELECT LOG_ID, PRIORITY_LANE, STATUS, RISK_SCORE FROM CC_WORKFLOW_LOG ORDER BY CREATED_AT DESC FETCH FIRST 5 ROWS ONLY;",response:'Latest governed workflow events returned for architecture walkthrough.'},
+      {command:"SELECT MEMORY_TYPE, NAMESPACE, COUNT(*) AS CNT FROM CC_AGENT_MEMORY GROUP BY MEMORY_TYPE, NAMESPACE;",response:'Memory distribution confirms layered architecture behavior.'}
+    ],
+    features:[
+      {title:'Converged Architecture',detail:'Planner, memory, tools, and governance all operate on one consistent Oracle data platform.'},
+      {title:'Lower Integration Friction',detail:'Fewer seams between AI and transactional systems simplify delivery and operations.'}
+    ]
+  },
+  conclusion:{
+    sql:'Final summary combines performance, oversight, and outcome indicators for executive review.',
+    commands:[
+      {command:"SELECT KPI_NAME, KPI_VALUE FROM CC_EXECUTIVE_OUTCOMES ORDER BY KPI_NAME;",response:'Outcome KPIs returned for business summary.'},
+      {command:"SELECT COUNT(*) AS AUDIT_EVENTS FROM CC_AUDIT_LOG WHERE CREATED_AT >= SYSDATE - 30;",response:'Recent governance activity count returned for confidence reporting.'}
+    ],
+    features:[
+      {title:'Single Outcome Backbone',detail:'Service quality, governance, and business KPIs are measured from one source of truth.'},
+      {title:'Scalable Agent Operations',detail:'Oracle AI Database 26ai supports reliable growth with consistent controls and auditability.'}
+    ]
+  },
+};
 let current='home';
 let s2ExecutionSteps=[];
+let xrayMode=false;
+const xrayDbHistory=[];
+const xraySeededScenes=new Set();
+
+function toggleHelp(){
+  toggleXrayMode();
+}
+
+function renderPresenterScript(){
+  const script=PRESENTER_SCRIPTS[current]||['Use scene actions to demonstrate business value first.'];
+  document.getElementById('pres-script').innerHTML=script.map(line=>`• ${line}`).join('<br>');
+}
+
+function toggleXrayMode(){
+  setXrayMode(!xrayMode);
+  renderXray();
+}
+
+function setXrayMode(open){
+  xrayMode=!!open;
+  const panel=document.getElementById('xrayPanel');
+  const toggle=document.getElementById('xrayToggle');
+  panel.classList.toggle('open',xrayMode);
+  toggle.classList.toggle('active',xrayMode);
+  toggle.setAttribute('aria-pressed',xrayMode?'true':'false');
+  toggle.title=xrayMode?'Hide scene guide':'Show scene guide';
+}
+
+function seedXraySceneActivity(sceneId){
+  if(xraySeededScenes.has(sceneId))return;
+  const profile=xraySceneProfiles[sceneId]||xraySceneProfiles.home;
+  (profile.commands||[]).forEach(entry=>{
+    xrayDbHistory.push({scene:sceneId,command:entry.command,response:entry.response});
+  });
+  xraySeededScenes.add(sceneId);
+}
+
+function renderXray(){
+  const profile=xraySceneProfiles[current]||xraySceneProfiles.home;
+  const terminal=document.getElementById('xray-terminal');
+  const entries=xrayDbHistory.filter(item=>item.scene===current);
+  terminal.innerHTML=entries.length
+    ? entries.map(item=>`<div class="term-block"><div class="term-cmd">SQL&gt; ${item.command}</div><div class="term-res">${item.response}</div></div>`).join('')
+    : '<div class="xray-terminal-empty">Run a scene action to load database command output.</div>';
+}
 
 function go(id){
   document.querySelectorAll('.scene').forEach(s=>s.classList.remove('active'));
@@ -264,6 +548,8 @@ function go(id){
   const link=document.querySelector(`[href="#${id}"]`);
   if(link)link.classList.add('active');
   document.getElementById('pres-cue').textContent=CUES[id]||'';
+  renderPresenterScript();
+  renderXray();
   window.location.hash=id;
 }
 
@@ -273,7 +559,8 @@ function resetCurrentScene(){const key=current.replace('scene','s');resetScene(k
 
 // Keyboard
 document.addEventListener('keydown',e=>{
-  if(e.key==='p'||e.key==='P'){document.getElementById('presenter').classList.toggle('open');e.preventDefault();}
+  if(e.key==='p'||e.key==='P'||e.key==='?'){toggleXrayMode();e.preventDefault();}
+  if(e.key==='x'||e.key==='X'){toggleXrayMode();e.preventDefault();}
   if(e.key==='ArrowRight')nextScene();
   if(e.key==='ArrowLeft')prevScene();
   if(e.key==='r'||e.key==='R')resetCurrentScene();
@@ -282,6 +569,15 @@ document.addEventListener('keydown',e=>{
 // Hash routing
 window.addEventListener('hashchange',()=>{const h=location.hash.slice(1);if(SCENES.includes(h))go(h);});
 if(location.hash){const h=location.hash.slice(1);if(SCENES.includes(h))go(h);}
+const hiddenHelp=document.getElementById('help');
+if(hiddenHelp)hiddenHelp.addEventListener('click',toggleXrayMode);
+const xrayToggleButton=document.getElementById('xrayToggle');
+xrayToggleButton.addEventListener('click',toggleXrayMode);
+document.getElementById('xrayClose').addEventListener('click',()=>setXrayMode(false));
+setTimeout(()=>xrayToggleButton.classList.remove('attention-pulse'),5000);
+seedXraySceneActivity('home');
+renderPresenterScript();
+renderXray();
 
 // =========================================================================
 // Helpers
@@ -291,6 +587,8 @@ async function api(method,url,body){
   if(body)opts.body=JSON.stringify(body);
   const r=await fetch(url,opts);
   if(!r.ok)throw new Error(`API error: ${r.status}`);
+  seedXraySceneActivity(current);
+  renderXray();
   return r.json();
 }
 

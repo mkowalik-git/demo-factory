@@ -1,4 +1,4 @@
-# Lab 8: Scene 9 Approval Dashboard
+# Scene 9 Approval Dashboard
 
 ## Introduction
 
@@ -39,7 +39,6 @@ Expected result:
 
 The dashboard scenario demonstrates that human oversight depends on data coherence as much as user interface design. Risk-tiered queues only work when statuses, priorities, and outcomes stay synchronized in real time. Oracle AI Database 26ai's converged architecture helps maintain that synchronization on a single transactional backbone, so customer AI-agent workflows can improve manager responsiveness and reporting quality without reconciliation delays.
 
-## Acknowledgements
-
+## Credits & Build Notes
 - **Author** - LiveLabs Team
 - **Last Updated By/Date** - LiveLabs Team, March 2026

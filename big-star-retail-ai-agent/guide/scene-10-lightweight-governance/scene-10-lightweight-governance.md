@@ -1,4 +1,4 @@
-# Lab 9: Scene 10 Lightweight Governance
+# Scene 10 Lightweight Governance
 
 ## Introduction
 
@@ -39,7 +39,6 @@ Expected result:
 
 This scene matters because governance has to protect the business without slowing daily execution. Role-aware access and lifecycle controls are effective only when enforced where operational and memory data actually reside. Oracle AI Database 26ai provides that alignment in a converged architecture, allowing customer AI-agent workflows to apply least-privilege access and context expiry while still enabling fast collaboration across business functions.
 
-## Acknowledgements
-
+## Credits & Build Notes
 - **Author** - LiveLabs Team
 - **Last Updated By/Date** - LiveLabs Team, March 2026

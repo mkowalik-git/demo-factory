@@ -1,4 +1,4 @@
-# Lab 5: Scene 6 Memory Types
+# Scene 6 Memory Types
 
 ## Introduction
 
@@ -39,7 +39,6 @@ Expected result:
 
 This scene explains why memory design is central to dependable AI operations. Different memory types carry different value, and when they are managed as disconnected components, consistency and explainability both degrade. Oracle AI Database 26ai is a strong fit because its converged model supports mixed data patterns under one governance framework, helping customer AI-agent workflows simplify architecture while improving retrieval consistency, maintainability, and confidence in decisions.
 
-## Acknowledgements
-
+## Credits & Build Notes
 - **Author** - LiveLabs Team
 - **Last Updated By/Date** - LiveLabs Team, March 2026
