@@ -4,18 +4,42 @@
 -- Merges schema, seed data, AI profile, governance, and agents.
 -- Idempotent: safe to run multiple times (DROP/CREATE pattern).
 -- Run as SYSTEM or SYS on Oracle 26ai Free (FREEPDB1).
+-- NOTE: APP_DB_ADMIN_PWD is read from environment via SQL*Plus HOST command.
 -- =============================================================================
+
+-- Capture APP_DB_ADMIN_PWD from container environment into SQL*Plus define variable.
+HOST sh -c 'printf "DEFINE APP_DB_ADMIN_PWD='\''%s'\''\n" "$APP_DB_ADMIN_PWD" > /tmp/set_app_pwd.sql'
+@/tmp/set_app_pwd.sql
+HOST rm -f /tmp/set_app_pwd.sql
+
+-- Ensure all objects are created in the pluggable database, not CDB$ROOT.
+BEGIN
+    EXECUTE IMMEDIATE 'ALTER SESSION SET CONTAINER = FREEPDB1';
+EXCEPTION
+    WHEN OTHERS THEN
+        NULL;
+END;
+/
 
 -- =============================================================================
 -- SECTION 1: User Setup
 -- =============================================================================
 DECLARE
     v_count NUMBER;
+    v_app_pwd VARCHAR2(4000) := q'[&&APP_DB_ADMIN_PWD]';
+    v_app_pwd_escaped VARCHAR2(4000);
 BEGIN
+    IF v_app_pwd IS NULL OR TRIM(v_app_pwd) = '' THEN
+        RAISE_APPLICATION_ERROR(-20001, 'APP_DB_ADMIN_PWD is empty. Refusing to create/alter HUB_USER.');
+    END IF;
+    v_app_pwd_escaped := REPLACE(v_app_pwd, '"', '""');
+
     SELECT COUNT(*) INTO v_count FROM dba_users WHERE username = 'HUB_USER';
     IF v_count = 0 THEN
-        EXECUTE IMMEDIATE 'CREATE USER hub_user IDENTIFIED BY "BigStar2026!" DEFAULT TABLESPACE USERS QUOTA UNLIMITED ON USERS';
+        EXECUTE IMMEDIATE 'CREATE USER hub_user IDENTIFIED BY "' || v_app_pwd_escaped || '" DEFAULT TABLESPACE USERS QUOTA UNLIMITED ON USERS';
     END IF;
+    EXECUTE IMMEDIATE 'ALTER USER hub_user IDENTIFIED BY "' || v_app_pwd_escaped || '" ACCOUNT UNLOCK';
+    EXECUTE IMMEDIATE 'ALTER USER hub_user DEFAULT TABLESPACE USERS QUOTA UNLIMITED ON USERS';
     EXECUTE IMMEDIATE 'GRANT CREATE SESSION, CREATE TABLE, CREATE VIEW, CREATE SEQUENCE, CREATE PROCEDURE, CREATE TRIGGER TO hub_user';
     EXECUTE IMMEDIATE 'GRANT RESOURCE TO hub_user';
 EXCEPTION
