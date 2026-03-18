@@ -24,6 +24,8 @@ Expected result:
 - Pending items are clearly visible.
 - Case details include action, customer context, and value.
 
+![big-star-scene-9-load-dashboard](images/big-star-scene-9-load-dashboard.png)
+
 ## Task 2: Approve or Reject a Pending Item
 
 1. Find an item with status **pending**.

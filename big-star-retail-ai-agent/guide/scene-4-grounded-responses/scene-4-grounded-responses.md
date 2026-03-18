@@ -19,6 +19,8 @@ In this lab, you will:
 2. Click **Run Without Data**.
 3. Read the response in the **Generic LLM** panel.
 
+![big-star-scene-4-run-without-data](images/big-star-scene-4-run-without-data.png)
+
 Expected result:
 - The response sounds confident but may be incorrect.
 - It can suggest a refund decision that conflicts with business policy.
@@ -29,6 +31,8 @@ Expected result:
 1. Click **Run With Data**.
 2. Review the response in the **Grounded Agent** panel.
 3. Check the cited policy references shown in the result.
+
+![big-star-scene-4-run-with-data](images/big-star-scene-4-run-with-data.png)
 
 Expected result:
 - The answer is tied to specific policy context.

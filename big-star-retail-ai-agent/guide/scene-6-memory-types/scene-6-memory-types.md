@@ -19,6 +19,8 @@ In this lab, you will:
 2. Click **Load Memory Types**.
 3. Review all cards shown in the grid.
 
+![big-star-scene-6-load-memory-types](images/big-star-scene-6-load-memory-types.png)
+
 Expected result:
 - You see memory categories with examples.
 - Each card explains how that memory type influenced the case.

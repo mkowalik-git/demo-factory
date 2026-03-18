@@ -19,6 +19,8 @@ In this lab, you will:
 2. Click **Load Sessions**.
 3. Read the timeline entries shown on screen.
 
+![big-star-scene-3-load-sessions](images/big-star-scene-3-load-sessions.png)
+
 Expected result:
 - Multiple prior contacts appear.
 - The same issue is repeated across sessions.
@@ -34,6 +36,8 @@ Expected result:
 - The agent acknowledges prior history.
 - It avoids asking the customer to repeat details.
 - Resolution moves faster with less friction.
+
+![big-star-scene-3-try-with-memory](images/big-star-scene-3-try-with-memory.gif)
 
 ## Task 3: Why this matters?
 

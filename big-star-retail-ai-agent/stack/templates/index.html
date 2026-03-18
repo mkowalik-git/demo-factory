@@ -706,7 +706,8 @@ async function runScene3(){
 async function runScene3Agent(){
   const el=document.getElementById('s3-agent');loading(el);
   try{const d=await api('POST','/api/scene3/with-memory');
-    el.innerHTML=`<div class="card"><h3>🧠 With Memory</h3><div class="response">${d.response}</div><div style="margin-top:.75rem;display:flex;gap:.5rem"><span class="badge badge-green">Memory Enabled</span><span class="badge badge-blue">${d.resolutionTime}</span></div></div>`;
+    const recalled=(d.interactionsReviewed||[]).map((s,i)=>`<div style="padding:.55rem .7rem;border:1px solid var(--border);border-radius:8px;margin-top:${i===0?'.5rem':'.4rem'};font-size:.8rem"><strong>${s.interactionId}</strong> · ${s.sessionId} · ${s.channel} · ${s.outcome}<div style="color:var(--muted);margin-top:.2rem">Handled by ${s.handledBy}</div></div>`).join('');
+    el.innerHTML=`<div class="card"><h3>🧠 With Memory</h3><div class="response">${d.response}</div>${recalled?`<div style="margin-top:.9rem"><h4 style="margin-bottom:.35rem">Interactions Recalled</h4>${recalled}</div>`:''}<div style="margin-top:.75rem;display:flex;gap:.5rem"><span class="badge badge-green">Memory Enabled</span><span class="badge badge-blue">${d.resolutionTime}</span></div></div>`;
   }catch(e){el.innerHTML=`<p style="color:var(--red)">Error: ${e.message}</p>`;}
 }
 

@@ -19,6 +19,8 @@ In this lab, you will:
 2. Click **Ungoverned Write**.
 3. Review the result and consequence message.
 
+![big-star-scene-7-ungoverned-write](images/big-star-scene-7-ungoverned-write.png)
+
 Expected result:
 - The claim is accepted too easily.
 - The outcome signals critical business risk.
@@ -29,6 +31,8 @@ Expected result:
 1. Click **Governed Write**.
 2. Review the updated result and audit panel.
 3. Compare this outcome with the ungoverned result.
+
+![big-star-scene-7-governed-write](images/big-star-scene-7-governed-write.png)
 
 Expected result:
 - The questionable claim is blocked or tightly validated.

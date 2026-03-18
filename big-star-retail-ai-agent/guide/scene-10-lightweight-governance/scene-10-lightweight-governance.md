@@ -24,6 +24,8 @@ Expected result:
 - Relevant memory content is visible.
 - Validation and expiry indicators are shown with business-friendly context.
 
+![big-star-scene-10-access-support-ns](images/big-star-scene-10-access-support-ns.gif)
+
 ## Task 2: Test Restricted Access
 
 1. Click **Access Logistics NS**.
@@ -34,6 +36,8 @@ Expected result:
 - Access is denied for restricted namespace content.
 - Sensitive details are redacted or withheld.
 - The scene clearly explains why the restriction exists.
+
+![big-star-scene-10-access-logistics-ns](images/big-star-scene-10-access-logistics-ns.png)
 
 ## Task 3: Why this matters?
 

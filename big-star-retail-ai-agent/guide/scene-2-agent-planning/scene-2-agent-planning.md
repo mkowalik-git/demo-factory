@@ -19,6 +19,8 @@ In this lab, you will:
 2. Click **Run Planner**.
 3. Wait for steps to appear in the **Plan** panel.
 
+![big-star-scene-2-run-planner](images/big-star-scene-2-run-planner.png)
+
 Expected result:
 - You see an ordered set of planned actions.
 - The sequence explains what the agent intends to do first, next, and last.
@@ -29,6 +31,8 @@ Expected result:
 1. After planning finishes, click **Run Execution**.
 2. Watch updates in the **Execution** panel.
 3. Compare execution output with the original plan.
+
+![big-star-scene-2-run-execution](images/big-star-scene-2-run-execution.png)
 
 Expected result:
 - Execution events appear in order.
