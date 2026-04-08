@@ -17,42 +17,83 @@ In this lab, you will:
 
 1. Download the package from:
 [ll-demo-agent.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/livestack/ll-demo-agent.zip)
-2. Save the file to a local working directory.
+
+2. Save the file to a local working directory that you can access from a terminal or command prompt.
 
 Expected result:
-- You have `ll-demo-agent.zip` available on your machine.
+- You have `ll-demo-agent.zip` saved on your machine in a known directory.
 
-## Task 2: Extract and prepare environment settings
+## Task 2: Move the package and prepare environment settings
 
-1. Extract the package:
+1. Open a terminal or command prompt.
+
+2. Create a new working directory outside of your `Downloads` folder:
     ```bash
-    unzip ll-demo-agent.zip -d big-star-demo
+    <copy>
+    mkdir -p ~/livestack-demo
+    <copy>
     ```
-2. Move into the extracted folder:
+
+3. Move into the new working directory:
     ```bash
-    cd big-star-demo
+    <copy>
+    cd ~/livestack-demo
+    <copy>
     ```
-3. Create your runtime environment file:
+
+4. Move the downloaded package from `Downloads` into this directory:
     ```bash
+    <copy>
+    mv ~/Downloads/ll-demo-agent.zip .
+    <copy>
+    ```
+
+    Working from `Downloads` is not recommended, because some container tools such as Podman may not behave reliably there depending on your local environment.
+
+5. Extract the package:
+    ```bash
+    <copy>
+    unzip ll-demo-agent.zip
+    <copy>
+    ```
+
+6. Move into the extracted folder:
+    ```bash
+    <copy>
+    cd ll-demo-agent
+    <copy>
+    ```
+
+7. Create your runtime environment file:
+    ```bash
+    <copy>
     cp .env.example .env
+    <copy>
     ```
 
 Expected result:
+- You are inside the `ll-demo-agent` directory.
 - The folder contains `compose.yaml`, `.env`, and all required app files.
 
 ## Task 3: Start the demo with Podman Compose
 
 1. Start all services:
     ```bash
+    <copy>
     podman compose up -d
+    <copy>
     ```
 2. Check service status:
     ```bash
+    <copy>
     podman compose ps
+    <copy>
     ```
 3. Verify application health:
     ```bash
+    <copy>
     curl http://localhost:5500/api/health
+    <copy>
     ```
 4. Open the demo in a browser:
     `http://localhost:5500`
@@ -66,7 +107,9 @@ Expected result:
 
 1. Stop and remove running containers:
     ```bash
+    <copy>
     podman compose down
+    <copy>
     ```
 
 Expected result:
