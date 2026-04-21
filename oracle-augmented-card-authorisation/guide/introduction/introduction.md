@@ -8,7 +8,7 @@ In this LiveStack, Oracle AI Database 26ai turns a live authorisation into one c
 
 Estimated Workshop Time: 1 hour 20 minutes
 
-![Augmented Bank Control Tower showing the case-led story shell, active case briefing, and operator journey](images/lloyds-control-tower.png)
+![Seer Equities Control Tower showing the case-led story shell, active case briefing, and operator journey](images/lloyds-control-tower.png)
 
 ### Objectives
 

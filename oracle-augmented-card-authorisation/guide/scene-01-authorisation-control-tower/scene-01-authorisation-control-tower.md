@@ -2,14 +2,14 @@
 
 ## Introduction
 
-This scene introduces the shell as a guided operator story, not a dashboard collection. You will open the Control Tower, review the single live case Oracle wants the operator to handle first, and use the briefing surfaces to carry that same case into the rest of the app.
+This scene introduces the Seer Equities shell as a guided operator story, not a dashboard collection. You will open the Control Tower, review the single live case Oracle wants the operator to handle first, and use the briefing surfaces to carry that same case into the rest of the app.
 
 Estimated Time: 10 minutes
 
 ### Objectives
 
 In this lab, you will:
-- Open the shell and confirm the stage-based navigation.
+- Open the Seer Equities shell and confirm the stage-based navigation.
 - Identify the primary live case, fallback case, and analyst queue.
 - Expand the active case brief and hand the same transaction into the next scene.
 
