@@ -121,7 +121,7 @@ services:
     environment:
       NODE_ENV: production
       PORT: 3001
-      FRONTEND_URL: http://localhost:${APP_PORT:-5500}
+      FRONTEND_URL: http://localhost:${APP_PORT:-8505}
       ORACLE_USER: SOCIALCOMMERCE
       ORACLE_PASSWORD: ${APP_SCHEMA_PASSWORD:-socialcommerce}
       ORACLE_CONNECTION_STRING: db:1521/FREEPDB1
@@ -141,7 +141,7 @@ services:
         cd frontend && npm run build && cd ..
         npm start
     ports:
-      - 5500:3001
+      - 8505:3001
     depends_on:
       db:
         condition: service_healthy

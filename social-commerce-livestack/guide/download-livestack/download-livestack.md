@@ -141,12 +141,12 @@ Expected result:
 3. Verify application health:
     ```bash
     <copy>
-    curl http://localhost:5500/api/health
+    curl http://localhost:8505/api/health
     <copy>
     ```
 
 4. Open the LiveStack in a browser:
-    `http://localhost:5500`
+    `http://localhost:8505`
 
 ### For Windows
 
@@ -167,12 +167,12 @@ Expected result:
 3. Verify application health:
     ```powershell
     <copy>
-    Invoke-RestMethod http://localhost:5500/api/health
+    Invoke-RestMethod http://localhost:8505/api/health
     <copy>
     ```
 
 4. Open the LiveStack in a browser:
-    `http://localhost:5500`
+    `http://localhost:8505`
 
 Expected result:
 - `db`, `ords`, `ollama`, and `app` are running.

@@ -18,7 +18,7 @@ In this lab, you will:
 1. Open a terminal.
 2. Clear the cache table:
     ```bash
-    curl -X POST http://localhost:5500/clear_cache
+    curl -X POST http://localhost:8505/clear_cache
     ```
 3. Return to the storefront and make sure **Database X-Ray** is still enabled.
 4. Search for `goalie practice`.
