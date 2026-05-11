@@ -150,7 +150,7 @@ services:
       PYTHONUNBUFFERED: "1"
     command: sh -c "pip install --no-cache-dir -r requirements.txt && python app.py"
     ports:
-      - "5500:8181"
+      - "8505:8181"
     depends_on:
       db:
         condition: service_healthy

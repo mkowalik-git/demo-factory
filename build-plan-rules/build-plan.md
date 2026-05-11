@@ -34,7 +34,7 @@ Rule: stories, personas, and language can change by industry; the core architect
 You must adhere to the local `rules.md` architecture contract:
 
 * **Topology:** `compose.yaml` must include these required core services: `db`, `ords`, `ollama`, `init-brain`, `app`. Service-to-service routing must use Compose service names (`db`, `ords`, `ollama`) rather than fixed container names. `db` and `app` should load `.env` via `env_file`. Additional optional services (for example: VS Code dev container, Jupyter notebook, observability, reverse proxy) are allowed if they do not break the core contract.
-* **Networking:** Use the default Compose project network unless there is a specific need for a custom named network. Canonical host mappings: `1521:1521`, `8181:8080`, `5500:8000`. `ollama` should remain internal by default.
+* **Networking:** Use the default Compose project network unless there is a specific need for a custom named network. Canonical host mappings: `1521:1521`, `8181:8080`, `8505:8000`. `ollama` should remain internal by default.
 * **On-Premise AI:** No OCI GenAI calls. `init-brain` pulls `gemma:2b`. `app` exposes relay endpoints for local Ollama (`/api/chat`, `/api/generate`).
 * **Mandatory Files:** `main.py`, `init.sql`, `seeder.py`, `templates/index.html`, `requirements.txt`, `compose.yaml`, `rules.md`.
 * **Healthchecks:** `ords` depends on healthy `db`; `init-brain` depends on healthy `ollama`; `app` depends on healthy `db`, healthy `ords`, healthy `ollama`, and successful `init-brain`.

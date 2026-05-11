@@ -17,7 +17,7 @@ In this lab, you will:
 
 1. Open the storefront in a browser:
     ```text
-    http://localhost:5500
+    http://localhost:8505
     ```
 2. In the search box, enter `zebra`.
 3. Click **Search**.

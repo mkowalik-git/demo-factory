@@ -25,7 +25,7 @@ In this workshop, you will:
 
 This workshop assumes you have:
 - A running stack endpoint, or local access to run `podman compose`.
-- Browser access to `http://localhost:5500`.
+- Browser access to `http://localhost:8505`.
 - Terminal access for service verification commands.
 
 ## Workshop Flow
@@ -45,8 +45,8 @@ This workshop assumes you have:
 
 ## Quick Reference
 
-- UI URL (default): `http://localhost:5500`
-- API health URL (default): `http://localhost:5500/api/health`
+- UI URL (default): `http://localhost:8505`
+- API health URL (default): `http://localhost:8505/api/health`
 - ORDS URL (default): `http://localhost:8181/ords/`
 - Ollama tags URL (default): `http://localhost:11434/api/tags`
 - Database service (default): `localhost:1521/FREEPDB1`

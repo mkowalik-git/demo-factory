@@ -39,7 +39,7 @@ Expected result:
     - `ollama-init`
     - `app`
 2. Confirm default local runtime ports:
-    - `5500` app
+    - `8505` app
     - `8181` ORDS
     - `11434` Ollama
     - `1521` database

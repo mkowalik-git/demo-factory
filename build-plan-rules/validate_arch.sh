@@ -99,7 +99,7 @@ check_service_block "compose.yaml" "app" "Core compose service present: app"
 check_yaml_port_mapping "compose.yaml" "1521:1521" "Port mapping present: DB 1521:1521"
 check_yaml_port_mapping "compose.yaml" "8181:8080" "Port mapping present: ORDS 8181:8080"
 check_yaml_port_mapping "compose.yaml" "11434:11434" "Port mapping present: Ollama 11434:11434"
-check_yaml_port_mapping "compose.yaml" "5500:8000" "Port mapping present: App 5500:8000"
+check_yaml_port_mapping "compose.yaml" "8505:8000" "Port mapping present: App 8505:8000"
 
 # Compose engine-neutral parsing (Docker + Podman)
 if command -v docker >/dev/null 2>&1; then

@@ -84,7 +84,7 @@ These are the canonical ports used by this architecture.
 
 - Oracle host mapping: `1521:1521`
 - ORDS host mapping: `8181:8080`
-- App host mapping: `5500:8000`
+- App host mapping: `8505:8000`
 
 `ollama` is internal-by-default in the stack-kevin style. Exposing `11434:11434` is optional for local debugging only.
 
@@ -207,7 +207,7 @@ Replication is valid only if **all checks pass**:
 2. Host port mappings are exactly:
    - `1521:1521`
    - `8181:8080`
-   - `5500:8000`
+   - `8505:8000`
    - (`11434:11434` optional only when intentionally exposing Ollama)
 3. App container exposes and serves on internal `8000`.
 4. `main.py` defaults include:

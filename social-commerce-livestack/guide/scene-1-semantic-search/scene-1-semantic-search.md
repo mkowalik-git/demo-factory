@@ -17,7 +17,7 @@ In this lab, you will:
 
 1. Open:
     ```text
-    http://localhost:5500
+    http://localhost:8505
     ```
 2. Confirm the navigation shows all scenes from `Welcome` through `Agent Console`.
 

@@ -53,10 +53,10 @@ Expected result:
     ```
 3. Verify application health:
     ```bash
-    curl http://localhost:5500 | head
+    curl http://localhost:8505 | head
     ```
 4. Open the demo in a browser:
-    `http://localhost:5500`
+    `http://localhost:8505`
 
 Expected result:
 - Oracle AI Database, ORDS, Ollama, model initialization, and app services start successfully.
