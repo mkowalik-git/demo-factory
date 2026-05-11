@@ -1,0 +1,70 @@
+{
+  "workshoptitle": "Seer Equity Bank Finance LiveStack",
+  "help": "livelabs-help-database_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "filename": "../../introduction/introduction.md"
+    },
+    {
+      "title": "Get Started",
+      "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+    },
+    {
+      "title": "Scene 1: Seer Equity Bank Control Tower",
+      "filename": "../../scene-1-seer-equity-bank-control-tower/scene-1-seer-equity-bank-control-tower.md"
+    },
+    {
+      "title": "Scene 2: Seer 26ai Data Foundation",
+      "filename": "../../scene-2-seer-26ai-data-foundation/scene-2-seer-26ai-data-foundation.md"
+    },
+    {
+      "title": "Scene 3: Risk and Operations Dashboard",
+      "filename": "../../scene-3-risk-and-operations-dashboard/scene-3-risk-and-operations-dashboard.md"
+    },
+    {
+      "title": "Scene 4: Regulatory and Market Signals",
+      "filename": "../../scene-4-regulatory-and-market-signals/scene-4-regulatory-and-market-signals.md"
+    },
+    {
+      "title": "Scene 5: Financial Crime Network",
+      "filename": "../../scene-5-financial-crime-network/scene-5-financial-crime-network.md"
+    },
+    {
+      "title": "Scene 6: Client Service Coverage",
+      "filename": "../../scene-6-client-service-coverage/scene-6-client-service-coverage.md"
+    },
+    {
+      "title": "Scene 7: Client Transactions and Cases",
+      "filename": "../../scene-7-client-transactions-and-cases/scene-7-client-transactions-and-cases.md"
+    },
+    {
+      "title": "Scene 8: Predictive Risk and Revenue Analytics",
+      "filename": "../../scene-8-predictive-risk-and-revenue-analytics/scene-8-predictive-risk-and-revenue-analytics.md"
+    },
+    {
+      "title": "Scene 9: Ask Seer Equity Data",
+      "filename": "../../scene-9-ask-seer-equity-data/scene-9-ask-seer-equity-data.md"
+    },
+    {
+      "title": "Scene 10: Agent Console",
+      "filename": "../../scene-10-agent-console/scene-10-agent-console.md"
+    },
+    {
+      "title": "Scene 11: Use Your Own Data",
+      "filename": "../../scene-11-use-your-own-data/scene-11-use-your-own-data.md"
+    },
+    {
+      "title": "Conclusion: Business Outcomes",
+      "filename": "../../conclusion/conclusion.md"
+    },
+    {
+      "title": "Download the LiveStack",
+      "filename": "../../download-livestack/download-livestack.md"
+    },
+    {
+      "title": "Need Help?",
+      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+    }
+  ]
+}
