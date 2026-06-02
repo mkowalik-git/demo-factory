@@ -1,4 +1,4 @@
-# Scene 10 Seer Media Agent Console
+# Scene 10 Media and Entertainment Action Console
 
 ## Introduction
 
@@ -10,12 +10,12 @@ Oracle AI Database helps address these challenges by keeping the source data, SQ
 
 Estimated Time: 10 minutes
 
-![Seer Media Agent Console overview with agent examples and recent actions](images/seer-media-agent-console.png)
+![Media and Entertainment Action Console overview with agent examples and recent actions](images/seer-media-agent-console.png)
 
 ### Objectives
 
 In this scene, you will:
-- Review the **Media & Gaming Action Console** workspace and runtime profile.
+- Review the **Media and Entertainment Action Console** workspace and runtime profile.
 - Review the trends, revenue, and coverage example questions.
 - Run a content revenue agent question.
 - Inspect the agent response and returned revenue table.
@@ -24,7 +24,7 @@ In this scene, you will:
 
 ## Task 1: Review the agent console workspace
 
-1. Click **Media & Gaming Action Console** in the sidebar.
+1. Click **Media and Entertainment Action Console** in the sidebar.
 2. Review the runtime profile selector. The current demo uses **llama3.2** through Ollama-backed reasoning.
 3. Review the example questions in the agent workspace.
 4. Review **Recent Agent Actions** below the workspace.
@@ -40,13 +40,11 @@ Use this opening view to explain the role of the page. The user is not looking a
 
     ![Content Revenue Agent response with revenue by category](images/agent-revenue-response.png)
 
-Callout 1 highlights the agent response and returned revenue table. Callout 2 highlights the runtime and tool evidence below the response.
-
 2. Review the agent response at the top of the chat output.
 3. Review the returned category, order count, and revenue table.
 4. Review the tool and runtime badges below the response.
 
-In the current seeded dataset, the agent routes the request to the **Content Revenue Agent** path and returns the last 30 days of revenue by category. The visible response shows **513** orders, about **$145.6M** in revenue, and categories such as **Sports Rights**, **Gaming and Esports**, **Marketing Assets**, **Audience Activation**, **Creator Campaign**, **Live Event**, **Streaming Placement**, and **Ad Inventory**. The response exposes the Ollama runtime and media revenue SQL tool path.
+In the current seeded dataset, the agent routes the request to the **Content Revenue Agent** path and returns the last 30 days of revenue by category. The visible response shows **514** campaign requests, about **$145.8M** in revenue, and categories such as **Sports Rights**, **Streaming and Live Entertainment**, **Marketing Assets**, **Audience Activation**, **Creator Campaign**, **Live Event**, **Streaming Placement**, and **Ad Inventory**. The response exposes the Ollama runtime and media revenue SQL tool path.
 
 This is the data point to emphasize during the demo. The agent did more than answer a text question. It classified the revenue intent, queried governed media data, returned a structured table, and exposed enough runtime information for an operator to understand the path.
 
@@ -68,4 +66,4 @@ You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-29
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-02

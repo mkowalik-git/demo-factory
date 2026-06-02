@@ -15,7 +15,7 @@ In this lab, you will:
 
 ## Task 1: Review the final operating model
 
-1. Open **Seer Media Control Tower**.
+1. Open **Welcome**.
 2. Use the left navigation to revisit the scenes that matter most to your audience.
 3. Summarize the story in one sentence: Seer Media detects audience demand, evaluates creator influence, checks rights and capacity, predicts revenue and retention risk, and routes decisions through governed Oracle data and agent workflows.
 
@@ -30,7 +30,7 @@ Expected result:
 3. In **Creator & Community Graph**, connect creator relationships to audience reach and influence paths.
 4. In **Rights, Capacity & Live Event Coverage**, connect spatial overlays and VPD context to regional execution.
 5. In **Campaign & Rights Requests**, connect relational, JSON duality, and activation-route views to the same governed campaign record.
-6. In **Engagement, Revenue & Retention Forecasts** and **Media & Gaming Action Console**, connect predictions and agent decisions to auditable Oracle-backed actions.
+6. In **Engagement, Revenue & Retention Forecasts** and **Media and Entertainment Action Console**, connect predictions and agent decisions to auditable Oracle-backed actions.
 
 Expected result:
 - You can describe concrete operational improvements: faster demand detection, more grounded content recommendations, clearer rights coverage, better campaign and revenue forecasting, stronger retention actions, and more auditable AI-assisted decisions.
@@ -54,4 +54,4 @@ Expected result:
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-29
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-02

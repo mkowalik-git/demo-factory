@@ -1,4 +1,4 @@
-# Media & Entertainment Content Intelligence LiveStack Guide
+# Media and Entertainment Content Intelligence LiveStack Guide
 
 ## Introduction
 
@@ -32,19 +32,21 @@ This LiveStack Demo assumes you have:
 
 ## Demo Flow
 
-- Scene 1: Seer Media Control Tower.
-- Scene 2: Seer 26ai Media Data Foundation.
-- Scene 3: Content Revenue and Operations Dashboard.
-- Scene 4: Audience and Market Signals.
-- Scene 5: Creator Influence Network.
-- Scene 6: Rights and Distribution Coverage.
-- Scene 7: Campaign Orders and Rights Cases.
-- Scene 8: Predictive Demand and Revenue Analytics.
-- Scene 9: Ask Seer Media Data.
-- Scene 10: Seer Media Agent Console.
-- Scene 11: Use Your Own Media Data.
+The live application opens with a welcome orientation, then moves through nine guided Media and Entertainment scenes for the Midnight Harbor launch story:
+
+- Welcome orientation: Midnight Harbor story and use-case preview.
+- Guided scene 1: Data Foundation.
+- Guided scene 2: Launch Operations Command Center.
+- Guided scene 3: Audience Momentum & Safety Signals.
+- Guided scene 4: Creator & Community Graph.
+- Guided scene 5: Rights, Capacity & Live Event Coverage.
+- Guided scene 6: Campaign & Rights Requests.
+- Guided scene 7: Engagement, Revenue & Retention Forecasts.
+- Guided scene 8: Ask Media and Entertainment Data.
+- Guided scene 9: Media and Entertainment Action Console.
+- Use Your Own Media Data operator workflow.
 - Conclusion and business outcomes.
-- Download and run the portable Media LiveStack.
+- Download and run the portable Media and Entertainment LiveStack.
 
 ## Learn More
 
@@ -58,4 +60,4 @@ This LiveStack Demo assumes you have:
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-29
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-02

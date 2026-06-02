@@ -1,4 +1,4 @@
-# Scene 9 Ask Seer Media Data
+# Scene 9 Ask Media and Entertainment Data
 
 ## Introduction
 
@@ -10,12 +10,12 @@ Oracle AI Database helps address these challenges by keeping query execution gro
 
 Estimated Time: 10 minutes
 
-![Ask Gaming and Media Data workspace with modes, schema metadata, and example questions](images/ask-seer-media-data.png)
+![Ask Media and Entertainment Data workspace with modes, schema metadata, and example questions](images/ask-seer-media-data.png)
 
 ### Objectives
 
 In this scene, you will:
-- Review the **Ask Gaming & Media Data** workspace, runtime profile, and modes.
+- Review the **Ask Media and Entertainment Data** workspace, runtime profile, and modes.
 - Compare **Explain**, **Chat**, **Show SQL**, and **Run SQL** against the same media question.
 - Use **Explain** to return a plain-English answer without foregrounding SQL.
 - Use **Chat** to return a conversational answer with follow-up prompts.
@@ -26,12 +26,12 @@ In this scene, you will:
 
 ## Task 1: Review the assistant workspace
 
-1. Click **Ask Gaming & Media Data** in the sidebar.
+1. Click **Ask Media and Entertainment Data** in the sidebar.
 2. Review the runtime profile in the top right of the assistant card. The current demo uses **llama3.2** through the local Ollama runtime.
 3. Review the queryable schema summary. The current page shows **7** domains and **16** queryable objects.
 4. Review example question categories such as **Launch Risk**, **Content Performance**, **Audience Segments**, **Audience Signals**, **Live Events**, **Studios**, **Monetization**, **Personalization**, and **Creator Analytics**.
 
-    ![Ask Gaming and Media Data workspace with modes, schema domains, and example questions highlighted](images/assistant-workspace-callout.png)
+    ![Ask Media and Entertainment Data workspace with modes, schema domains, and example questions highlighted](images/assistant-workspace-callout.png)
 
 Use this opening view to explain the governance pattern. The user asks a media question in plain English, but Oracle remains the execution layer for authorized SQL over the governed schema.
 
@@ -88,10 +88,10 @@ Use the four completed mode examples to explain the governance pattern behind th
 4. Oracle AI Database executes authorized SQL against the live schema.
 5. The UI returns visible SQL, rows, or a narrated answer depending on the selected mode.
 
-This pattern matters because media users want faster answers, but they also need governed access. Ask Gaming & Media Data shows how natural-language analytics can support self-service exploration without hiding the query path or replacing the database as the trusted execution layer.
+This pattern matters because media users want faster answers, but they also need governed access. Ask Media and Entertainment Data shows how natural-language analytics can support self-service exploration without hiding the query path or replacing the database as the trusted execution layer.
 
 You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-29
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-02

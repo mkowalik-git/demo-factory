@@ -1,8 +1,8 @@
-# Scene 4 Audience and Market Signals
+# Scene 4 Audience Momentum and Safety Signals
 
 ## Introduction
 
-An audience engagement analyst, content personalization lead, programming manager, trust and safety analyst, or ad-sales strategist uses this page to understand what viewers, subscribers, fans, and players are signaling before demand is obvious in campaign orders alone. The persona is looking for patterns in watch-time comments, creator posts, moderation queues, social sentiment, churn risk, ARPU signals, and content mentions.
+An audience engagement analyst, content personalization lead, programming manager, trust and safety analyst, or ad-sales strategist uses this page to understand what viewers, subscribers, fans, and audience communities are signaling before demand is obvious in campaign orders alone. The persona is looking for patterns in watch-time comments, creator posts, moderation queues, social sentiment, churn risk, ARPU signals, and content mentions.
 
 Semantic search is difficult to implement when audience signals, content catalogs, embeddings, search indexes, and access policies live in separate systems. Media teams often have to move audience text into external search services, synchronize vector indexes, and then rebuild governance outside the database.
 
@@ -30,7 +30,7 @@ In this scene, you will:
 
     ![Audience signal workspace with vector search and media posts](images/audience-signal-feed.png)
 
-In the current seeded dataset, the feed contains **5.0K** posts across platforms such as YouTube, Twitter, TikTok, Instagram, and Threads. Visible examples include signals about sports media buyers, moderation queues, in-game purchase demand, ARPU lift, churn risk, creator momentum, watch time, and live-event planning.
+In the current seeded dataset, the feed contains **5.0K** posts across platforms such as YouTube, Twitter, TikTok, Instagram, and Threads. Visible examples include signals about sports media buyers, moderation queues, premium purchase interest, ARPU lift, churn risk, creator momentum, watch time, and live-event planning.
 
 ## Task 2: Run content asset vector search
 
@@ -56,4 +56,4 @@ You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-29
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-02

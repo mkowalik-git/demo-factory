@@ -54,9 +54,8 @@ In the hosted demo captured for this runbook, **Preview Restore** returned **Val
 
 Use this scene to explain the operating guardrail. Teams can bring their own synthetic, masked, or approved sample media data into the LiveStack, but the seeded dataset remains available so the demo can always return to a known baseline.
 
-You can move to the conclusion or the download lab when you want to run the Media LiveStack locally.
+You can move to the conclusion or the download lab when you want to run the Media and Entertainment LiveStack locally.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-29
-- **Screenshot source** - Captured from `http://141.148.236.195:8505/`.
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-02

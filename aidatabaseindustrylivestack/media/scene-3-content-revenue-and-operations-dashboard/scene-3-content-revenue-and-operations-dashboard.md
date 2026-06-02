@@ -1,4 +1,4 @@
-# Scene 3 Content Revenue and Operations Dashboard
+# Scene 3 Launch Operations Command Center
 
 ## Introduction
 
@@ -38,7 +38,7 @@ In the current seeded dataset, the page shows **3.0K** campaign requests, about 
 1. Click a signal velocity time range such as **24h**, **48h**, **7d**, or **30d**.
 2. Review how the signal chart changes by time bucket.
 3. Review the content revenue chart by category.
-4. Focus on visible categories such as **Sports Rights**, **Gaming and Esports**, **Marketing Assets**, **Audience Activation**, **Creator Campaign**, **Live Event**, **Streaming Placement**, and **Ad Inventory**.
+4. Focus on visible categories such as **Sports Rights**, **Streaming and Live Entertainment**, **Marketing Assets**, **Audience Activation**, **Creator Campaign**, **Live Event**, **Streaming Placement**, and **Ad Inventory**.
 
     ![Audience signal velocity controls and content revenue breakdown](images/audience-signal-velocity-and-revenue.png)
 
@@ -48,7 +48,7 @@ This is the business story to emphasize: media teams need to know where attentio
 
 1. Scroll to **Content Demand Alerts - Audience Momentum**.
 2. Review the content asset, studio or label, mentions, views, virality, and momentum columns.
-3. Focus on visible examples such as **Pulse Arena Creator Clip Flight**, **Echo Valley FAST Channel Breakout Package**, **WideAngle Matchday In-Game Purchase Offer**, and **Family Animation Premiere**.
+3. Focus on visible examples such as **Pulse Arena Creator Clip Flight**, **Echo Valley FAST Channel Breakout Package**, **WideAngle Matchday Premium Purchase Offer**, and **Family Animation Premiere**.
 4. Use the row data to connect audience behavior to programming, content recommendation, campaign, or rights-capacity decisions.
 
     ![Content demand alerts table with high-momentum media assets](images/content-demand-alerts.png)
@@ -59,4 +59,4 @@ You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-29
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-02

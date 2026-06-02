@@ -1,4 +1,4 @@
-# Scene 7 Campaign Orders and Rights Cases
+# Scene 7 Campaign and Rights Requests
 
 ## Introduction
 
@@ -27,23 +27,21 @@ In this scene, you will:
 2. Review the active user banner. The current demo user is **Jessica Chen**, with **Admin** access and **20** visible requests on the page.
 3. Review the status filter.
 4. Review the request table columns: request id, audience account, location, status, line items, total, audience signal, coverage hub, and created time.
-5. Focus on request **#77816**.
+5. Focus on request **#100036**.
 
-    ![Campaign request workspace with request 77816 visible](images/campaign-request-workspace.png)
+    ![Campaign request workspace with request 100036 visible](images/campaign-request-workspace.png)
 
-Callout 1 highlights the governed user and VPD access banner. Callout 2 highlights the status filter used to narrow the operations queue. Callout 3 highlights the request row that will be inspected through the rest of the scene.
-
-In the current seeded dataset, request **#77816** is for **Ava Martinez** in **Edison, New Jersey**. It is in **Building Package** status, has **3** line items, totals **$348,250.00**, and uses **Seattle Gaming Live Ops Hub** as the coverage hub. This request will be the data point used through the rest of the scene.
+In the current seeded dataset, request **#100036** is for **Ava Martinez** in **Edison, New Jersey**. It is in **Building Package** status, has **3** line items, totals **$348,250.00**, and uses **Seattle Live Event Operations Hub** as the coverage hub. This request will be the data point used through the rest of the scene.
 
 ## Task 2: Inspect the relational request detail
 
-1. Click request **#77816**.
+1. Click request **#100036**.
 
-    ![Relational detail for campaign request 77816](images/campaign-request-relational-detail.png)
+    ![Relational detail for campaign request 100036](images/campaign-request-relational-detail.png)
 
 2. Confirm the **Relational** tab is selected.
 3. Review audience account, location, total, activation cost, and line items.
-4. Review content assets such as **Game Trailer Premiere Takeover**, **International Fandom Watch Party**, and **Lunar Kitchen Live Ops Quest Reset**.
+4. Review content assets such as **Championship Highlights Rights**, **International Fandom Watch Party**, and **Lunar Kitchen Premiere Window**.
 
 This view is useful for operations because the campaign request header and item detail remain normalized and easy to validate.
 
@@ -51,12 +49,10 @@ This view is useful for operations because the campaign request header and item 
 
 1. Click **JSON Duality View** in the expanded request panel.
 
-    ![JSON Duality View for campaign request 77816](images/campaign-request-json-duality.png)
-
-Callout 1 highlights the **JSON Duality View** selection. Callout 2 highlights the `ORDERS_DV` source query. Callout 3 highlights the document-shaped JSON view of the same campaign request.
+    ![JSON Duality View for campaign request 100036](images/campaign-request-json-duality.png)
 
 2. Review the source label **ORDERS_DV**.
-3. Review the JSON document for request **77816**.
+3. Review the JSON document for request **100036**.
 4. Notice that the document contains `_id`, `customerId`, `status`, `total`, `demandScore`, `createdAt`, and nested `items`.
 
 This is the key point of the page. The JSON document is not a separate copy of the request. It is the same governed campaign data exposed through an Oracle JSON Relational Duality View. Application teams can use document-shaped access while operations teams continue to work with relational tables and SQL.
@@ -65,15 +61,13 @@ This is the key point of the page. The JSON document is not a separate copy of t
 
 1. Click **Activation Route** in the expanded request panel.
 
-    ![Activation route for campaign request 77816](images/campaign-request-activation-route.png)
-
-Callout 1 highlights the route map from the coverage hub to the audience account. Callout 2 highlights the activation status and progress indicators. Callout 3 highlights the Oracle Spatial SQL used to calculate distance from governed location data.
+    ![Activation route for campaign request 100036](images/campaign-request-activation-route.png)
 
 2. Review the coverage hub and audience account.
 3. Review distance, estimated activation time, activation cost, route status, and activation progress.
 4. Review the Oracle Spatial SQL example.
 
-For request **#77816**, the page shows an activation route from **Seattle Gaming Live Ops Hub** to **Ava Martinez - Edison, New Jersey**. The route distance is about **2,394 miles** and the estimated activation time is about **43.5 hours**. The page explains that Oracle Spatial calculates distance between governed `SDO_GEOMETRY` points.
+For request **#100036**, the page shows an activation route from **Seattle Live Event Operations Hub** to **Ava Martinez - Edison, New Jersey**. The route distance is about **2,394 miles** and the estimated activation time is about **43.5 hours**. The page explains that Oracle Spatial calculates distance between governed `SDO_GEOMETRY` points.
 
 The value of Oracle AI Database is that the same campaign request can support operations, API access, and activation analysis without splitting the story across separate persistence layers.
 
@@ -81,4 +75,4 @@ You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-29
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-02

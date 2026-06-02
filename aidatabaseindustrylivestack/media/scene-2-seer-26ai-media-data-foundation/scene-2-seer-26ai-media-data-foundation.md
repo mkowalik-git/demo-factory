@@ -1,14 +1,14 @@
-# Scene 2 Seer 26ai Media Data Foundation
+# Scene 2 Media and Entertainment Data Foundation
 
 ## Introduction
 
 This scene prepares the Seer Media dataset that powers the rest of the LiveStack Demo. The page loads or restores the governed Oracle AI Database 26ai data foundation, then shows the major media domains and data types used across the application.
 
-The scene is useful at the start of a customer walkthrough because it establishes that the later pages are not separate demos. Players, viewers, subscribers, fans, creators, content assets, campaign requests, live events, audience momentum signals, trust and safety signals, coverage geography, vector embeddings, ML outputs, and agent audit history are all prepared from the same Oracle-backed foundation.
+The scene is useful at the start of a customer walkthrough because it establishes that the later pages are not separate demos. Viewers, subscribers, fans, creators, content assets, campaign requests, live events, audience momentum signals, trust and safety signals, coverage geography, vector embeddings, ML outputs, and agent audit history are all prepared from the same Oracle-backed foundation.
 
 Estimated Time: 5 minutes
 
-![Seer 26ai Media Data Foundation page with dataset controls and loaded domains](images/media-data-foundation.png)
+![Media and Entertainment Data Foundation page with dataset controls and loaded domains](images/media-data-foundation.png)
 
 ### Objectives
 
@@ -35,7 +35,7 @@ Use these counts to frame the demo. The user is not loading a single table for a
 ## Task 2: Review what gets loaded
 
 1. Scroll to **What Gets Loaded**.
-2. Review the first carousel cards: **Gaming & Media Data Foundation**, **Launch Operations Intelligence**, and **Audience Momentum & Safety Signals**.
+2. Review the first carousel cards: **Media and Entertainment Data Foundation**, **Launch Operations Intelligence**, and **Audience Momentum & Safety Signals**.
 3. Use the carousel arrow to review the remaining data groups.
 4. If you discuss implementation details live, open the **Oracle Internals** rail, then collapse it again before continuing the screenshot-oriented walkthrough.
 
@@ -59,4 +59,4 @@ You can move to the next scene.
 
 ## Credits & Build Notes
 - **Author** - Oracle LiveLabs Team
-- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-05-29
+- **Last Updated By/Date** - Oracle LiveLabs Team, 2026-06-02
