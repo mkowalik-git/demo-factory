@@ -7,6 +7,7 @@ import {
   LayoutDashboard,
   Map,
   Network,
+  ServerCog,
   ShoppingCart,
 } from 'lucide-react';
 import { api } from './utils/api';
@@ -24,6 +25,7 @@ import AskData from './pages/AskData';
 import AIDataLakehouse from './pages/AIDataLakehouse';
 import BronzeDataLoadGuide from './pages/BronzeDataLoadGuide';
 import SilverProcessGuide from './pages/SilverProcessGuide';
+import IcebergCatalogServerGuide from './pages/IcebergCatalogServerGuide';
 import RealTimeStreaming from './pages/RealTimeStreaming';
 import CustomerCDC from './pages/CustomerCDC';
 import AdminEntry from './pages/AdminEntry';
@@ -73,6 +75,7 @@ const BRONZE_DATA_LOAD_PAGE_ID = 'bronze-load';
 const REAL_TIME_STREAMING_PAGE_ID = 'streaming';
 const CHANGE_DATA_CAPTURE_PAGE_ID = 'customer-cdc';
 const SILVER_PROCESS_PAGE_ID = 'silver-process';
+const ICEBERG_CATALOG_SERVER_PAGE_ID = 'iceberg-catalog-server';
 const PROCESS_SIDEBAR_EXCLUSIONS = new Set([
   'Data Quality & Enrichment',
   'Analytics-Ready Datasets',
@@ -111,6 +114,12 @@ const SILVER_PROCESS_NAV_ITEM = {
   label: DATA_PROCESSING_LABEL,
   iconClass: 'oj-fwk-icon oj-fwk-icon-copy',
 };
+const ICEBERG_CATALOG_SERVER_NAV_ITEM = {
+  id: ICEBERG_CATALOG_SERVER_PAGE_ID,
+  pageId: ICEBERG_CATALOG_SERVER_PAGE_ID,
+  label: 'Add Iceberg Catalog Server',
+  Icon: ServerCog,
+};
 
 const ROUTED_NAV_ITEMS = [
   WELCOME_NAV_ITEM,
@@ -118,6 +127,7 @@ const ROUTED_NAV_ITEMS = [
   CHANGE_DATA_CAPTURE_NAV_ITEM,
   BRONZE_DATA_LOAD_NAV_ITEM,
   SILVER_PROCESS_NAV_ITEM,
+  ICEBERG_CATALOG_SERVER_NAV_ITEM,
   ...PAGE_NAV_ITEMS,
   ...ADMIN_NAV_ITEMS,
 ];
@@ -179,7 +189,7 @@ const SIDEBAR_GROUPS = [
     id: 'transform',
     label: 'Process',
     iconClass: 'oj-fwk-icon oj-fwk-icon-tree-folder-open',
-    items: workflowItems('transform', PROCESS_SIDEBAR_EXCLUSIONS),
+    items: [...workflowItems('transform', PROCESS_SIDEBAR_EXCLUSIONS), ICEBERG_CATALOG_SERVER_NAV_ITEM],
   },
   {
     id: 'serve-data',
@@ -235,6 +245,7 @@ const PAGES = {
   [CHANGE_DATA_CAPTURE_PAGE_ID]: CustomerCDC,
   [BRONZE_DATA_LOAD_PAGE_ID]: BronzeDataLoadGuide,
   [SILVER_PROCESS_PAGE_ID]: SilverProcessGuide,
+  [ICEBERG_CATALOG_SERVER_PAGE_ID]: IcebergCatalogServerGuide,
 };
 
 function resolveInitialPage() {
@@ -815,7 +826,7 @@ export default function App() {
                             hasLakehouseConnection: Boolean(activeLakehouseConnection && dataLoadingUrl),
                             pgPassword: activeLakehouseConnection?.schemaPassword,
                           }
-                          : activePage === SILVER_PROCESS_PAGE_ID
+                          : activePage === SILVER_PROCESS_PAGE_ID || activePage === ICEBERG_CATALOG_SERVER_PAGE_ID
                             ? {
                               dataTransformsUrl: dataTransformUrl,
                               hasLakehouseConnection: Boolean(activeLakehouseConnection && dataTransformUrl),
