@@ -68,9 +68,9 @@ const webshopRoutes = require('./routes/webshop');
 const streamingAnalyticsRoutes = require('./routes/streamingAnalytics');
 const streamingIngestRoutes = require('./routes/streamingIngest');
 const customerCdcRoutes = require('./routes/customerCdc');
-const icebergCatalogRoutes = require('./routes/icebergCatalog');
 const dataSourcesRoutes = require('./routes/dataSources');
 const awsGlueRoutes = require('./routes/awsGlue');
+const sourceCatalogsRoutes = require('./routes/sourceCatalogs');
 
 app.use('/api/dashboard', dashboardRoutes);
 app.use('/api/social', socialRoutes);
@@ -89,9 +89,9 @@ app.use('/api/webshop', webshopRoutes);
 app.use('/api/streaming-analytics', streamingAnalyticsRoutes);
 app.use('/api/streaming-ingest', streamingIngestRoutes);
 app.use('/api/customer-cdc', customerCdcRoutes);
-app.use('/api/iceberg-catalog', icebergCatalogRoutes);
 app.use('/api/data-sources', dataSourcesRoutes);
 app.use('/api/aws-glue', awsGlueRoutes);
+app.use('/api/source-catalogs', sourceCatalogsRoutes);
 
 // ── Health Check ───────────────────────────────────────────
 app.get('/api/health', async (req, res) => {
