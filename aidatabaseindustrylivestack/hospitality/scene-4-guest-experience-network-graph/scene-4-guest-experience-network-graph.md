@@ -44,5 +44,5 @@ Trace a multi-hop guest-experience or operating issue and turn the relationships
 
 ## Credits and Build Notes
 
-- Author: Oracle LiveLabs Team
-- Last updated: 2026-09-18
+- Author: Matt Kowalik, Principal Product Manager
+- Last updated: September 2026

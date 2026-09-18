@@ -48,5 +48,5 @@ Use the operational-risk table to select the room type, revenue center, or prope
 
 ## Credits and Build Notes
 
-- Author: Oracle LiveLabs Team
-- Last updated: 2026-09-18
+- Author: Matt Kowalik, Principal Product Manager
+- Last updated: September 2026

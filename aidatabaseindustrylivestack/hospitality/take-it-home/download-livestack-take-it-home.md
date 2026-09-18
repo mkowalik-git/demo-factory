@@ -730,7 +730,7 @@ A portable LiveStack runbook turns this guide into something teams can reproduce
 
 This guide is self-service for technical users who can install Podman and run terminal commands. Users who are new to containers should complete the Podman readiness checks before starting and ask for help if those checks fail.
 
-## Credits and build notes
+## Credits and Build Notes
 
-- **Author** - LiveLabs Team
-- **Last Updated By/Date** - LiveLabs Team, 2026-06-04
+- Author: Matt Kowalik, Principal Product Manager
+- Last updated: September 2026

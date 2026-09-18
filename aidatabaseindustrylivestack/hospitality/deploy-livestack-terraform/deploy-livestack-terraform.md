@@ -199,7 +199,7 @@ Expected result:
 
 - Destroy completes successfully and the stack no longer retains the billable demo resources.
 
-## Acknowledgements
+## Credits and Build Notes
 
-- **Author** - Oracle LiveLabs Team.
-- **Last Updated By/Date** - Oracle LiveLabs Team, September 2026.
+- Author: Matt Kowalik, Principal Product Manager
+- Last updated: September 2026

@@ -44,5 +44,5 @@ All owner close records in this scene are synthetic demo data and do not describ
 
 ## Credits and Build Notes
 
-- Author: Oracle LiveLabs Team
-- Last updated: 2026-09-18
+- Author: Matt Kowalik, Principal Product Manager
+- Last updated: September 2026

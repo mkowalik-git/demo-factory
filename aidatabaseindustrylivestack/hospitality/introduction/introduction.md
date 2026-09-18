@@ -74,5 +74,5 @@ Open the running Hospitality LiveStack in a modern browser. No database or codin
 
 ## Credits and Build Notes
 
-- Author: Oracle LiveLabs Team
-- Last updated: 2026-09-18
+- Author: Matt Kowalik, Principal Product Manager
+- Last updated: September 2026

@@ -39,5 +39,5 @@ Ask a focused operations question, review the assigned specialist context, and c
 
 ## Credits and Build Notes
 
-- Author: Oracle LiveLabs Team
-- Last updated: 2026-09-18
+- Author: Matt Kowalik, Principal Product Manager
+- Last updated: September 2026

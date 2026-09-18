@@ -48,5 +48,5 @@ These data models and workloads run in one Oracle AI Database 26ai instance. Con
 
 ## Credits and Build Notes
 
-- Author: Oracle LiveLabs Team
-- Last updated: 2026-09-18
+- Author: Matt Kowalik, Principal Product Manager
+- Last updated: September 2026

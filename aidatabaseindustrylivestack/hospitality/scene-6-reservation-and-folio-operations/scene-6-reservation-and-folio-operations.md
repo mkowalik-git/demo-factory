@@ -44,5 +44,5 @@ Inspect the operational record behind a guest, revenue, service, or event decisi
 
 ## Credits and Build Notes
 
-- Author: Oracle LiveLabs Team
-- Last updated: 2026-09-18
+- Author: Matt Kowalik, Principal Product Manager
+- Last updated: September 2026

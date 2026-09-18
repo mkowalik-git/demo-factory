@@ -42,5 +42,5 @@ Ask an operating question, inspect the reasoning path that the interface exposes
 
 ## Credits and Build Notes
 
-- Author: Oracle LiveLabs Team
-- Last updated: 2026-09-18
+- Author: Matt Kowalik, Principal Product Manager
+- Last updated: September 2026
