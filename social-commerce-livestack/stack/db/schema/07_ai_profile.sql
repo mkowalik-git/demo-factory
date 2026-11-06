@@ -18,7 +18,7 @@
  *     scripts/setup_ai_profile.sh
  *
  *   Manual — SQLcl with values pre-defined:
- *     DEFINE OCI_COMPARTMENT_ID = ocid1.compartment.oc1..xxx
+ *     DEFINE OCI_COMPARTMENT_ID = YOUR_COMPARTMENT_OCID
  *     DEFINE OCI_CRED_NAME      = OCI$RESOURCE_PRINCIPAL
  *     @db/schema/07_ai_profile.sql
  *
@@ -34,46 +34,9 @@ SET SERVEROUTPUT ON
 SET VERIFY OFF
 
 
-BEGIN
-  BEGIN DBMS_CLOUD.DROP_CREDENTIAL('OCI_CRED'); EXCEPTION WHEN OTHERS THEN NULL; END;
+-- OCI credentials are provisioned separately by setup_ai_profile.sh.
+-- For manual runs, create the OCI credential first and define OCI_CRED_NAME.
 
-  DBMS_CLOUD.CREATE_CREDENTIAL(
-    credential_name => 'OCI_CRED',
-    user_ocid       => 'ocid1.user.oc1..aaaaaaaaoyjkqdm4hpn23uddvl67uhk7hoz3i5biwapxxsxbsjpkx6aaacfa',
-    tenancy_ocid    => 'ocid1.tenancy.oc1..aaaaaaaaj4ccqe763dizkrcdbs5x7ufvmmojd24mb6utvkymyo4xwxyv3gfa',
-    fingerprint     => '1a:8f:9a:60:22:bb:45:60:6a:64:95:4a:1a:23:f9:72',
-    private_key     =>
-'-----BEGIN RSA PRIVATE KEY-----
-MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDbH5bRsvdlywFw
-4f84HBwmm3WBBQ8UbgmbucwhmAmdHdlgrRglVy7KgfE3ee6T4VBxwknY6lHnWFBT
-DUy94aG+s+8f2J0PqDSPLAN0875mkQkHfk3WBXS1TcfBeLsE/F1k8jKvjITFA3Cx
-Cysus4VD+R8lF+6hB4FoxaLNcnK5fYRA3nzbeC6Aa9ym639PLcQAb8CbigVR7TuB
-a1qSQdbpuLRCqxouxSwxDxyzbz27P0dYfj5xZ2RJPy8dXMhnvICg1UhHDeDYAPzK
-mnaElPP+fbSPVyfMoeEvOw4/6Dps6A0LRDvSvfd1dPFeEcwnxQqK4PF3VrlTHQJ7
-iNzWObCFAgMBAAECggEAK/TMibDzyYb9eUJQsxYKfKErY3AbHA9N3KAbJ7MK3KqH
-+ImIojb4wzVpaOZMGny0qTlfHIU23Gh+JobwudeJHYsVYUdQDHvC3WSoJd4eeA9I
-pyjqXtBV3uflNjWsmJ2yc4VVbxtKaAYeZVmW9kWbam0PVx7TpxhtGJIq7Dk08+nv
-eF0PnKC8+rTeKQ3KRJ+GvU4ZHXUxk0flF8/S4uH+s2s7Y5NH6zkibHqsbKc7Aw8g
-3/wuocI+51tPF56iaMgzihb92DDWoEG04XTgLF3YupAzji+TNWxQA1cFAcY9m+Xz
-/7v6Mc2TEho1Ap+Toyw0WtrIM9JslCrvH1USVhWqQQKBgQD8DlH3pQceL2r9lc59
-2NEImFC3Vj1ygC4JL8JowlFBfkg/JOxrv+SaiPF9Fr1fAiKku3fOH8DoPvkemi7z
-YHWmqAb0gqwADMFdufAFJdJRnVCna3Cd+lWp8lRO9LDiBJZH3ASrRZgOOhDVUXvt
-dYFsLdWjpDljcA2Bc2+BsNNqwQKBgQDejVk5tZIcgJ3bN7pswKscjG0N53DILybx
-jyacf87Tk9sSuHcRCDFfQTsckMoKuax/0FbD71sGhEs+xA6VRbGVaw4rR769uhxy
-TK4Nbr8vkRCoeriSG2givXkEkjuACARZgL27smsGuXmTZ3x3w8chY0mL9ZkQznaZ
-sXeOSZ0KxQKBgQC7gCuZfTn+SmfcnEQvecqGCkiBGbY8Jv4X9183btXjUn2L+3uj
-6+uyyYxa8T+OHZiH0q0cuKJYIgBPs4KZqXfbscL6wPoST2rIvji+m5QJAm2tHU95
-NW/kLFBrK7spZyAj9JfEkNC8RJWhGiyGSJMuVipGwTOvtPtXAPhCEbg0AQKBgDlP
-szOOU6MtZ/llH4gUEbyXWRokiMG0itXYJHxW2X9Y6yimAluLfZNnK/7ONomOiSKd
-F0r737gM54exW4QLX5D38b0pi7A2Nk8k+gmRhICOXfjVKaTOlAGmQ3zu3424As69
-vZ6RcshXiTxxgPcinqw1cmItjA5s7NPlhMFKqbt1AoGAJyimNyqjuQvKz7LJKNS6
-TNt3H2jY9Q0IS/i4v5nHuPs/NZDRx/GCs2Vzr7r4p3cPPv97OHCaizS+yuqllKzS
-APBG4NYR4IR3EDrX+b+yQ0TwsLABvO76+4JjYq5yhBZe0lkRXIAWl/pWXIPe7dRU
-16TMZqMDEAXNxImGn1ZQ8dk=
------END RSA PRIVATE KEY-----'
-  );
-END;
-/
 
 
 
@@ -91,8 +54,8 @@ BEGIN
         profile_name => 'SC_COHERE_PROFILE',
         attributes   => '{
             "provider"        : "oci",
-            "credential_name" : "OCI_CRED",
-            "oci_compartment_id" : "ocid1.compartment.oc1..aaaaaaaatrquizuaoob2ey6czxmuikndr3carpnop4tg4rauc5cqg764ucja",
+            "credential_name" : "&&OCI_CRED_NAME",
+            "oci_compartment_id" : "&&OCI_COMPARTMENT_ID",
             "model"           : "cohere.command-r-plus-08-2024",
             "oci_apiformat"   : "COHERE",
             "max_tokens"      : 2048,
@@ -133,8 +96,8 @@ BEGIN
         profile_name => 'SC_LLAMA_PROFILE',
         attributes   => '{
             "provider"        : "oci",
-            "credential_name" : "OCI_CRED",
-            "oci_compartment_id" : "ocid1.compartment.oc1..aaaaaaaatrquizuaoob2ey6czxmuikndr3carpnop4tg4rauc5cqg764ucja",
+            "credential_name" : "&&OCI_CRED_NAME",
+            "oci_compartment_id" : "&&OCI_COMPARTMENT_ID",
             "model"           : "meta.llama-3.3-70b-instruct",
             "oci_apiformat"   : "GENERIC",
             "max_tokens"      : 2048,
@@ -175,8 +138,8 @@ BEGIN
         profile_name => 'SC_GROK42_PROFILE',
         attributes   => '{
             "provider"        : "oci",
-            "credential_name" : "OCI_CRED",
-            "oci_compartment_id" : "ocid1.compartment.oc1..aaaaaaaatrquizuaoob2ey6czxmuikndr3carpnop4tg4rauc5cqg764ucja",
+            "credential_name" : "&&OCI_CRED_NAME",
+            "oci_compartment_id" : "&&OCI_COMPARTMENT_ID",
             "model"           : "xai.grok-4.20-0309-reasoning",
             "region"          : "us-chicago-1",
             "oci_apiformat"   : "GENERIC",
@@ -219,8 +182,8 @@ BEGIN
         profile_name => 'SC_VISION_PROFILE',
         attributes   => '{
             "provider"        : "oci",
-            "credential_name" : "OCI_CRED",
-            "oci_compartment_id" : "ocid1.compartment.oc1..aaaaaaaatrquizuaoob2ey6czxmuikndr3carpnop4tg4rauc5cqg764ucja",
+            "credential_name" : "&&OCI_CRED_NAME",
+            "oci_compartment_id" : "&&OCI_COMPARTMENT_ID",
             "model"           : "meta.llama-3.2-90b-vision-instruct",
             "oci_apiformat"   : "GENERIC",
             "max_tokens"      : 1024,
@@ -246,8 +209,8 @@ BEGIN
         profile_name => 'SC_EMBED_PROFILE',
         attributes   => '{
             "provider"        : "oci",
-            "credential_name" : "OCI_CRED",
-            "oci_compartment_id" : "ocid1.compartment.oc1..aaaaaaaatrquizuaoob2ey6czxmuikndr3carpnop4tg4rauc5cqg764ucja",   
+            "credential_name" : "&&OCI_CRED_NAME",
+            "oci_compartment_id" : "&&OCI_COMPARTMENT_ID",   
             "embedding_model" : "cohere.embed-multilingual-v3.0"
         }'
     );
